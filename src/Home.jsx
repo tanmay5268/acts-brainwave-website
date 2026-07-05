@@ -32,7 +32,8 @@ import { sponsors } from "./data/data.js"
 import PersonCard from "./components/PersonCard.jsx";
 import { people } from "./data/data.js";
 import mentorsHeading from "./assets/mentorsHeading.png";
-
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 //    const events = [
 //   { side: "left",  name: "Registrations Open",  date: "28 / 06 / 2026", info: "Sign up on the official portal" },
@@ -455,17 +456,17 @@ export default function Home() {
       <section id="mentors" className="relative w-full">
 
         {/* =============== MENTORS START =============== */}
-          
-              <div className="w-full px-4 md:px-8 lg:px-12 py-24">
 
-                {/* Heading */}
+        <div className="w-full px-4 md:px-8 lg:px-12 py-24">
 
-                <div className="flex items-center gap-5 mb-16">
+          {/* Heading */}
 
-                  <img
-                    src={lineLeftAbout}
-                    alt=""
-                    className="
+          <div className="flex items-center gap-5 mb-16">
+
+            <img
+              src={lineLeftAbout}
+              alt=""
+              className="
                       hidden
                       md:block
 
@@ -474,24 +475,24 @@ export default function Home() {
                       h-3
                       object-fill
                     "
-                  />
+            />
 
-                  <img
-                    src={mentorsHeading}
-                    alt="Mentors"
-                    className="
+            <img
+              src={mentorsHeading}
+              alt="Mentors"
+              className="
                       w-[320px]
                       md:w-[450px]
                       lg:w-[560px]
 
                       h-auto
                     "
-                  />
+            />
 
-                  <img
-                    src={lineRightAbout}
-                    alt=""
-                    className="
+            <img
+              src={lineRightAbout}
+              alt=""
+              className="
                       hidden
                       md:block
 
@@ -500,13 +501,77 @@ export default function Home() {
                       h-3
                       object-fill
                     "
-                  />
+            />
 
-                </div>
+          </div>
 
-                
+          {/* ================= Mentor Carousel ================= */}
 
-              </div>
+          <div className="mt-16">
+
+            <Splide
+              options={{
+                type: "loop",
+
+                perPage: 7,
+                perMove: 1,
+
+                gap: "24px",
+
+                autoplay: true,
+                interval: 3000,
+
+                pauseOnHover: true,
+                pauseOnFocus: true,
+
+                arrows: true,
+                pagination: true,
+
+                drag: true,
+
+                speed: 800,
+
+                breakpoints: {
+                  1800: {
+                    perPage: 6,
+                  },
+
+                  1500: {
+                    perPage: 5,
+                  },
+
+                  1200: {
+                    perPage: 4,
+                  },
+
+                  900: {
+                    perPage: 3,
+                  },
+
+                  640: {
+                    perPage: 2,
+                  },
+
+                  480: {
+                    perPage: 1,
+                  },
+                },
+              }}
+            >
+              {people.map((person) => (
+                <SplideSlide key={person.id}>
+
+                  <div className="flex justify-center">
+                    <PersonCard person={person} />
+                  </div>
+
+                </SplideSlide>
+              ))}
+            </Splide>
+
+          </div>
+
+        </div>
 
         {/* ================ MENTORS END ================ */}
 
