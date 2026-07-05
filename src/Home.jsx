@@ -486,28 +486,6 @@ export default function Home() {
   return (
     <main className="relative min-h-screen w-full overflow-x-hidden text-white">
 
-      {/* ========================================================== */}
-      {/*                  GLOBAL WEBSITE BACKGROUND                 */}
-      {/* ========================================================== */}
-
-      <div className="fixed inset-0 -z-50">
-
-        <Dither
-          waveColor={[0.9372549019607843, 0.9686274509803922, 0.24705882352941178]}
-          disableAnimation={false}
-          enableMouseInteraction
-          mouseRadius={0.3}
-          colorNum={4}
-          waveAmplitude={0.3}
-          waveFrequency={3}
-          waveSpeed={0.05}
-        />
-
-      </div>
-
-      {/* ========================================================== */}
-      {/*                        DARK OVERLAY                        */}
-      {/* ========================================================== */}
 
       <div className="fixed inset-0 bg-black/85 -z-40" />
 
