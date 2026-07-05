@@ -13,3 +13,201 @@ body {
 *{
   box-sizing:border-box;
 }
+
+.accordion{
+    margin: 130px auto;
+    width: 100%;
+    max-width: 810px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #121212;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+@media (max-width: 430px){
+    .accordion {
+        width: 90%;
+        margin-top: 120 px;
+    }
+}
+label::after{
+    content: '+';
+    font-size: 28px;
+    position: absolute;
+    right: 20px;
+    transition: transform(0.5s);
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #121212;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 3opx 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq small{
+    font-size: 13px;
+}
+
+.social-links img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+.fade-in{
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.popup{
+    animation: popUp 1.2s ease-out;
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}@import "tailwindcss";
+
+.accordion{
+    margin: 130px auto;
+    width: 100%;
+    max-width: 810px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #121212;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+@media (max-width: 430px){
+    .accordion {
+        width: 90%;
+        margin-top: 120 px;
+    }
+}
+label::after{
+    content: '+';
+    font-size: 28px;
+    position: absolute;
+    right: 20px;
+    transition: transform(0.5s);
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #121212;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 3opx 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq small{
+    font-size: 13px;
+}
+
+.social-links img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+.fade-in{
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.popup{
+    animation: popUp 1.2s ease-out;
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
