@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
-import Dither from "./components/Dither";
+import DitherBackground from "./components/DitherBackground";
 import timelineHeading from "./assets/timeline-heading.png";
 import elementImg from "./assets/element.png";
 import smileyImg from "./assets/smiley.png";
