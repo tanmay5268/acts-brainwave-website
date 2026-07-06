@@ -462,98 +462,95 @@ export default function Home() {
       {/* 5. Keep the design responsive.                                */}
       {/* =============================================================== */}
 
-      
+
 
       <section id="hero" className="relative w-full overflow-hidden">
-  <div className="relative w-full aspect-[412/915] lg:aspect-[1440/900]">
+        <div className="relative w-full aspect-[412/915] lg:aspect-[1513/732]">
 
-    {/* ================= Decorative Stickers ================= */}
+          {/* ================= Decorative Stickers ================= */}
 
-    <img className="absolute h-[26.21vw] -right-[8.74vw] lg:right-[-0.28vw] lg:h-[13.89vw] popup" src={wheel} />
-    <img className="absolute h-[19.42vw] left-[30.1vw] lg:left-[20.72vw] lg:h-[8.56vw] popup" src={specialdeal} />
-    <img className="absolute h-[3.61vw] lg:left-[61.11vw] lg:h-[7.78vw] lg:top-[-1.11vw] hidden lg:block popup" src={lightning} />
+          <img className="absolute h-[26.21vw] -right-[8.74vw] lg:right-[-0.28vw] lg:h-[13.89vw] popup" src={wheel} />
+          <img className="absolute h-[19.42vw] left-[30.1vw] lg:left-[20.72vw] lg:h-[8.56vw] popup" src={specialdeal} />
+          <img className="absolute h-[3.61vw] lg:left-[61.11vw] lg:h-[7.78vw] lg:top-[-1.11vw] hidden lg:block popup" src={lightning} />
 
-    {/* Adjusted spark2 to stay in its design spot */}
-    <img className="absolute h-[31.07vw] top-[200.97vw] left-[35.92vw] lg:left-[30.56vw] lg:top-[48.61vw] lg:h-[13.89vw] popup" src={spark2} />
+          {/* FIXED: Brought the missing white spark sticker back to its top-left quadrant position */}
+          <img className="absolute h-[16.5vw] top-[27.18vw] left-[4.85vw] lg:top-[18.06vw] lg:left-[10.44vw] lg:h-[7.5vw] popup" src={spark} />
 
-    {/* FIXED: Brought the missing white spark sticker back to its top-left quadrant position */}
-    <img className="absolute h-[16.5vw] top-[27.18vw] left-[4.85vw] lg:top-[18.06vw] lg:left-[10.44vw] lg:h-[7.5vw] popup" src={spark} />
+          <img className="absolute h-[25.24vw] top-[170vw] lg:top-[29.44vw] lg:h-[14.17vw] popup" src={check} />
 
-    <img className="absolute h-[25.24vw] top-[170vw] lg:top-[29.44vw] lg:h-[14.17vw] popup" src={check} />
+          <img className="absolute h-[21.36vw] top-[176.7vw] -right-[7.77vw] lg:top-[27.5vw] lg:right-[-0.28vw] lg:h-[8.61vw] popup" src={qrcode} />
 
-    <img className="absolute h-[21.36vw] top-[176.7vw] -right-[7.77vw] lg:top-[27.5vw] lg:right-[-0.28vw] lg:h-[8.61vw] popup" src={qrcode} />
+          <img className="absolute h-[29.13vw] top-[34.95vw] rotate-6 -right-[8.74vw] lg:top-[9.17vw] lg:right-[-6.67vw] lg:h-[16.67vw] popup" src={triangle} />
 
-    <img className="absolute h-[29.13vw] top-[34.95vw] rotate-6 -right-[8.74vw] lg:top-[9.17vw] lg:right-[-6.67vw] lg:h-[16.67vw] popup" src={triangle} />
+          <img className="absolute h-[38.83vw] top-[55.34vw] -left-[3.88vw] lg:top-[16.67vw] lg:h-[15.83vw] lg:left-[-2.22vw] popup" src={coin} />
 
-    <img className="absolute h-[38.83vw] top-[55.34vw] -left-[3.88vw] lg:top-[16.67vw] lg:h-[15.83vw] lg:left-[-2.22vw] popup" src={coin} />
+          <img className="absolute -rotate-10 top-[199.03vw] -right-[7.77vw] h-[28.16vw] lg:h-[16.67vw] lg:right-[-5.56vw] lg:top-[34.72vw] popup" src={smile} />
 
-    <img className="absolute -rotate-10 top-[199.03vw] -right-[7.77vw] h-[28.16vw] lg:h-[16.67vw] lg:right-[-5.56vw] lg:top-[34.72vw] popup" src={smile} />
+          {/* FIXED: Repositioned Crown to match Figma (Higher up, further right, proper scaling) */}
+          <img className="absolute top-[19.42vw] left-[77.67vw] h-[21.36vw] lg:top-[13vw] lg:left-[78%] lg:h-[11vw] popup" src={crown} />
 
-    {/* FIXED: Repositioned Crown to match Figma (Higher up, further right, proper scaling) */}
-    <img className="absolute top-[19.42vw] left-[77.67vw] h-[21.36vw] lg:top-[13vw] lg:left-[78%] lg:h-[11vw] popup" src={crown} />
+          <img className="absolute -rotate-11 top-[166.02vw] right-[1.94vw] w-[10.68vw] lg:top-[22.78vw] lg:right-[5.28vw] lg:w-[5.56vw] popup" src={pose} />
 
-    <img className="absolute -rotate-11 top-[166.02vw] right-[1.94vw] w-[10.68vw] lg:top-[22.78vw] lg:right-[5.28vw] lg:w-[5.56vw] popup" src={pose} />
+          <img className="absolute h-[34.95vw] top-[-5.83vw] -left-[26.21vw] lg:left-[-8.33vw] lg:top-[-1.94vw] lg:h-[18.06vw]" src={keepout} />
 
-    <img className="absolute h-[34.95vw] top-[-5.83vw] -left-[26.21vw] lg:left-[-8.33vw] lg:top-[-1.94vw] lg:h-[18.06vw]" src={keepout} />
+          <img className="absolute top-[185.15vw] -left-[5.83vw] h-[39.81vw] lg:h-[20vw] lg:-left-[0.56vw] lg:top-[34.17vw] popup" src={spray} />
 
-    <img className="absolute top-[185.15vw] -left-[5.83vw] h-[39.81vw] lg:h-[20vw] lg:-left-[0.56vw] lg:top-[34.17vw] popup" src={spray} />
+          <img className="absolute right-[0.97vw] -top-[11.65vw] h-[33.01vw] lg:right-[5.28vw] lg:-top-[8.61vw] lg:h-[20.83vw] popup" src={punk} />
 
-    <img className="absolute right-[0.97vw] -top-[11.65vw] h-[33.01vw] lg:right-[5.28vw] lg:-top-[8.61vw] lg:h-[20.83vw] popup" src={punk} />
-
-    {/* Mobile caution */}
-    <img
-      className="absolute block lg:hidden max-w-[118vw] h-[12.62vw] top-[212vw] popup"
-      src={caution}
-      alt=""
-    />
-
-    {/* Desktop caution */}
-    <img
-      className="absolute hidden lg:block left-1/2 -translate-x-1/2 top-[43.2vw] w-full max-w-[1800px] h-auto popup"
-      src={caution}
-      alt=""
-    />
-
-    <img
-      className="absolute w-[12.62vw] left-[25.24vw] top-[171.26vw] lg:top-[31.67vw] lg:left-[16.11vw] lg:w-[5.28vw] popup"
-      src={tag}
-      alt=""
-    />
-
-    {/* ================= CENTER CONTENT ================= */}
-
-    <div className="absolute inset-0 flex justify-center mt-[75.42vw] lg:mt-[7.5vw]">
-
-      <div className="flex flex-col items-center gap-[3.5vw] lg:gap-[0.2vw]">
-
-        {/* Logo */}
-        <img
-          src={myLogo}
-          className="block lg:hidden w-[58.25vw] fade-in"
-          alt=""
-        />
-        <img
-          src={biglogo}
-          className="hidden lg:block w-[50vw] fade-in"
-          alt=""
-        />
-
-        {/* Date */}
-        <img
-          src={date}
-          className="w-[35.19vw] lg:w-[17.36vw]"
-          alt=""
-        />
-
-        {/* Timer */}
-        <div className="relative">
+          {/* Mobile caution */}
           <img
-            src={timerbg}
-            className="w-[67.96vw] lg:w-[29.44vw]"
+            className="absolute block lg:hidden max-w-[118vw] h-[12.62vw] top-[212vw] popup"
+            src={caution}
             alt=""
           />
-          <div
-            className="
+
+          {/* Desktop caution */}
+          <img
+            className="absolute hidden lg:block left-1/2 -translate-x-1/2 top-[43.2vw] w-full max-w-[1800px] h-auto popup"
+            src={caution}
+            alt=""
+          />
+
+          <img
+            className="absolute w-[12.62vw] left-[25.24vw] top-[171.26vw] lg:top-[31.67vw] lg:left-[16.11vw] lg:w-[5.28vw] popup"
+            src={tag}
+            alt=""
+          />
+
+          {/* ================= CENTER CONTENT ================= */}
+
+          <div className="absolute inset-0 flex justify-center pt-[75.42vw] lg:pt-[7.5vw]">
+
+            <div className="flex flex-col items-center gap-[3.5vw] lg:gap-[0.2vw]">
+
+              {/* Logo */}
+              <img
+                src={myLogo}
+                className="block lg:hidden w-[58.25vw] fade-in"
+                alt=""
+              />
+              <img
+                src={biglogo}
+                className="hidden lg:block w-[50vw] fade-in"
+                alt=""
+              />
+
+              {/* Date */}
+              <img
+                src={date}
+                className="w-[35.19vw] lg:w-[17.36vw]"
+                alt=""
+              />
+
+              {/* Timer */}
+              <div className="relative">
+                <img
+                  src={timerbg}
+                  className="w-[67.96vw] lg:w-[29.44vw]"
+                  alt=""
+                />
+                <div
+                  className="
           absolute inset-0
           flex items-center justify-center
           text-black
@@ -562,48 +559,48 @@ export default function Home() {
           text-[6.31vw]
           lg:text-[3vw]
         "
-          >
-            {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
+                >
+                  {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
+                </div>
+              </div>
+
+              {/* Buttons */}
+              <div className="flex flex-col lg:flex-row gap-[3vw] lg:gap-[1.8vw]">
+
+                <a
+                  href="https://yourwebsite.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-links"
+                >
+                  <img
+                    src={register}
+                    className="h-[11.65vw] lg:h-[5.56vw] popup"
+                    alt=""
+                  />
+                </a>
+
+                <a
+                  href="https://yourwebsite.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-links"
+                >
+                  <img
+                    src={join}
+                    className="h-[11.65vw] lg:h-[5.56vw] popup"
+                    alt=""
+                  />
+                </a>
+
+              </div>
+
+            </div>
+
           </div>
-        </div>
-
-        {/* Buttons */}
-        <div className="flex flex-col lg:flex-row gap-[3vw] lg:gap-[1.8vw]">
-
-          <a
-            href="https://yourwebsite.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-links"
-          >
-            <img
-              src={register}
-              className="h-[11.65vw] lg:h-[5.56vw] popup"
-              alt=""
-            />
-          </a>
-
-          <a
-            href="https://yourwebsite.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-links"
-          >
-            <img
-              src={join}
-              className="h-[11.65vw] lg:h-[5.56vw] popup"
-              alt=""
-            />
-          </a>
 
         </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
+      </section>
 
       {/* =============================================================== */}
       {/*                      ABOUT BRAINWAVE                           */}
@@ -760,25 +757,7 @@ export default function Home() {
 
       </section>
 
-      {/* =============================================================== */}
-      {/*                    HIGHLIGHTS / GALLERY                        */}
-      {/* =============================================================== */}
-      <section id="gallery" className="relative w-full">
-        {/* =============== GALLERY START =============== */}
 
-
-        {/* ================ GALLERY END ================= */}
-      </section>
-
-      {/* =============================================================== */}
-      {/*                      COUNTDOWN TIMER                           */}
-      {/* =============================================================== */}
-      <section id="countdown" className="relative w-full">
-        {/* ============== COUNTDOWN START ============== */}
-
-
-        {/* =============== COUNTDOWN END =============== */}
-      </section>
 
       {/* TIMELINE SECTION */}
       <div className='relative min-h-screen'>
@@ -977,7 +956,7 @@ export default function Home() {
                 object-fill
                 min-w-0
               "
-          />
+            />
 
 
           </div>
