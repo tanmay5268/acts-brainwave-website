@@ -66,7 +66,7 @@ import PersonCard from "./components/PersonCard.jsx";
 import { people } from "./data/data.js";
 import mentorsHeading from "./assets/mentorsHeading.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css/core";
+import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import Tracks from "./components/Tracks.jsx";
 
@@ -991,6 +991,10 @@ export default function Home() {
                 },
 
                 breakpoints: {
+                  1700: {
+                    perPage: 5,
+                    gap: "20px",
+                  },
                   1200: {
                     perPage: 4,
                     gap: "36px",
