@@ -56,6 +56,18 @@ import linkedin from "./assets/images/linkedin.png";
 import gmail from "./assets/images/gmail.png";
 import linktree from "./assets/images/linktree.png";
 import "./index.css";
+import aboutBrainwaveHeading from "./assets/about-brainwave-heading.png"
+import smileyAbout from "./assets/smiley-about.png"
+import lineRightAbout from "./assets/line-right-about.png";
+import lineLeftAbout from "./assets/line-left-about.png"
+import sponsorsHeading from "./assets/sponsorsHeading.png"
+import { sponsors } from "./data/data.js"
+import PersonCard from "./components/PersonCard.jsx";
+import { people } from "./data/data.js";
+import mentorsHeading from "./assets/mentorsHeading.png";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css/core";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 const events = [
   { side: "left",  name: "Registrations Open",  date: "28 / 06 / 2026", info: "Sign up on the official portal" },
@@ -496,11 +508,156 @@ export default function Home() {
       {/* =============================================================== */}
       {/*                      ABOUT BRAINWAVE                           */}
       {/* =============================================================== */}
-      <section id="about" className="relative w-full">
-        {/* ================= ABOUT START ================= */}
+      <section id="about" className="relative w-full mt-20">
 
+        <div
+          className="
+            relative
+            w-full
+            min-h-[470px]
+            lg:h-[48vh]
 
-        {/* ================= ABOUT END =================== */}
+            px-4
+            md:px-10
+            lg:px-12
+            xl:px-16
+          "
+        >
+
+          {/* Content */}
+          <div className="relative z-10 w-full">
+
+            {/* Heading */}
+            <div className="relative flex items-start">
+
+              <img
+                src={aboutBrainwaveHeading}
+                alt="About Brainwave"
+                className="
+                  w-[360px]
+                  sm:w-[360px]
+                  md:w-[520px]
+                  lg:w-[631px]
+
+                  h-auto
+                  shrink-0
+
+                  select-none
+                  pointer-events-none
+                "
+              />
+
+              {/* Desktop line */}
+              <img
+                src={lineRightAbout}
+                alt=""
+                className="
+                  hidden
+                  md:block
+
+                  ml-5
+                  mt-3
+
+                  w-[220px]
+                  lg:w-[300px]
+                  xl:w-[720px]
+
+                  h-auto
+                  object-contain
+                  shrink-0
+
+                  pointer-events-none
+                  select-none
+                "
+              />
+
+              {/* Smiley */}
+              <img
+                src={smileyAbout}
+                alt=""
+                className="
+                  absolute
+
+                  -top-6
+                  -right-14
+
+                  w-20
+                  sm:w-14
+
+                  md:w-20
+                  lg:w-28
+                  xl:w-36
+
+                  md:top-0
+                  md:-right-20
+
+                  lg:-top-8
+                  lg:-right-32
+
+                  pointer-events-none
+                  select-none
+                "
+              />
+
+            </div>
+
+            {/* Paragraph */}
+            <div className="mt-8 mb-8">
+
+              <p
+                className="
+                  font-exo
+                  font-medium
+
+                  text-base
+                  sm:text-lg
+                  md:text-2xl
+                  lg:text-[32px]
+
+                  leading-relaxed
+                  lg:leading-[1.45]
+
+                  text-white
+                "
+              >
+                BrainWave 2026, organized by ACTS – EDC (Association for Computer
+                Technology Students – EDC), is New Delhi's biggest student-led
+                hackathon, bringing together students, innovators, developers,
+                designers, and entrepreneurs from across India and around the world.
+                Returning for its 2nd edition, BrainWave 2026 is an immersive
+                24-hour hackathon where participants collaborate, innovate, and
+                build impactful solutions to solve real-world challenges.
+
+              </p>
+              <br />
+              <br />
+              <p
+                className="
+                  font-exo
+                  font-bold
+
+                  text-base
+                  sm:text-lg
+                  md:text-2xl
+                  lg:text-[32px]
+
+                  leading-relaxed
+                  lg:leading-[1.45]
+
+                  text-white
+                "
+              >
+                Join us as we shape the future of innovation, push the boundaries
+                of technology, and empower the next generation of changemakers at
+                BrainWave 2026.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
       {/* =============================================================== */}
@@ -537,21 +694,263 @@ export default function Home() {
       {/* =============================================================== */}
       {/*                         SPONSORS                              */}
       {/* =============================================================== */}
-      <section id="sponsors" className="relative w-full">
-        {/* =============== SPONSORS START ============== */}
+      <section id="sponsors" className="relative w-full py-10 md:py-24 overflow-hidden">
 
+        <div className="w-full px-4 md:px-8 lg:px-12">
 
-        {/* ================ SPONSORS END =============== */}
+          {/* Heading */}
+          <div className="flex items-center justify-center gap-5 mb-10 md:mb-16 w-full">
+
+            <img
+              src={lineLeftAbout}
+              alt=""
+              className="
+              hidden
+              md:block
+
+              flex-1
+
+              h-3
+              object-fill
+              min-w-0
+            "
+            />
+
+            <img
+              src={sponsorsHeading}
+              alt="Sponsors"
+              className="
+              w-[300px]
+              md:w-[420px]
+              lg:w-[520px]
+              
+              
+              h-auto
+              shrink-0
+            "
+            />
+
+            <img
+              src={lineRightAbout}
+              alt=""
+              className="
+              hidden
+              md:block
+
+              flex-1
+
+              h-3
+              object-fill
+              min-w-0
+            "
+            />
+
+          </div>
+
+          {/* Carousel */}
+
+          <div
+            className="
+              overflow-hidden
+              rounded-3xl
+              
+              md:py-8
+
+              relative
+              isolate
+            "
+          >
+            <div className="sponsors-track mt-5">
+
+              {[...sponsors, ...sponsors].map((sponsor, index) => (
+
+                <div
+                  key={`${sponsor.id}-${index}`}
+                  className="
+                    flex
+                    items-center
+                    justify-center
+
+                    shrink-0
+
+                    w-[80px]
+                    h-[80px]
+
+                    sm:w-[150px]
+                    sm:h-[150px]
+
+                    md:w-[190px]
+                    md:h-[190px]
+
+                    lg:w-[250px]
+                    lg:h-[250px]
+                  "
+                >
+
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    loading="lazy"
+                    draggable={false}
+                    className="
+                      w-[120px]
+                      h-[120px]
+
+                      md:w-[150px]
+                      md:h-[150px]
+
+                      lg:w-[180px]
+                      lg:h-[180px]
+
+                      object-contain
+
+                      select-none
+                      pointer-events-none
+                    "
+                  />
+
+                </div>
+
+              ))}
+
+            </div>
+          </div>
+
+        </div>
+
       </section>
 
       {/* =============================================================== */}
       {/*                    MENTORS / JUDGES                           */}
       {/* =============================================================== */}
-      <section id="mentors" className="relative w-full">
+      <section id="mentors" className="relative w-full mt-10">
+
         {/* =============== MENTORS START =============== */}
 
+        <div className="w-full px-4 md:px-8 lg:px-12 py-10 md:py-24">
+
+          {/* Heading */}
+
+          <div className="flex items-center justify-center gap-5 mb-16 w-full">
+
+            <img
+              src={lineLeftAbout}
+              alt=""
+              className="
+                hidden
+                md:block
+
+                flex-1
+
+                h-3
+                object-fill
+                min-w-0
+              "
+            />
+
+            <img
+              src={mentorsHeading}
+              alt="Mentors & Judges"
+              className="
+                w-[420px]
+                sm:w-[480px]
+                md:w-[640px]
+                lg:w-[840px]
+
+                h-auto
+                object-contain
+
+                shrink-0
+              "
+            />
+
+            <img
+              src={lineRightAbout}
+              alt=""
+              className="
+                hidden
+                md:block
+
+                flex-1
+
+                h-3
+                object-fill
+                min-w-0
+              "
+          />
+
+
+          </div>
+
+          {/* ================= Mentor Carousel ================= */}
+
+          <div className="mt-5 md:mt-25">
+
+            <Splide
+              extensions={{ AutoScroll }}
+              options={{
+                type: "loop",
+
+                perPage: 7,
+                gap: "24px",
+
+                arrows: true,
+                pagination: true,
+                drag: true,
+
+                autoWidth: false,
+
+                autoScroll: {
+                  autoStart: true,
+                  speed: 0.7,
+                  pauseOnHover: true,
+                  pauseOnFocus: true,
+                },
+
+                breakpoints: {
+                  1200: {
+                    perPage: 4,
+                    gap: "36px",
+                  },
+
+                  900: {
+                    perPage: 3,
+                    gap: "32px",
+                  },
+
+                  640: {
+                    perPage: 2,
+                    gap: "24px",
+                  },
+
+                  480: {
+                    fixedWidth: "170px",
+                    focus: "center",
+                    gap: "16px",
+                    padding: "2.5rem",
+                    arrows: false,
+                    pagination: true,
+                  },
+                },
+              }}
+            >
+              {people.map((person) => (
+                <SplideSlide key={person.id}>
+
+                  <div className="flex justify-center">
+                    <PersonCard person={person} />
+                  </div>
+
+                </SplideSlide>
+              ))}
+            </Splide>
+
+          </div>
+
+        </div>
 
         {/* ================ MENTORS END ================ */}
+
       </section>
 
       {/* =============================================================== */}
@@ -638,6 +1037,6 @@ export default function Home() {
         {/* ================== FOOTER END =============== */}
       </footer>
 
-    </main>
+    </main >
   );
 }
