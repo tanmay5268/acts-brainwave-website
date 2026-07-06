@@ -471,16 +471,17 @@ export default function Home() {
 
           {/* ================= Decorative Stickers ================= */}
 
-          <img className="absolute h-[26.21vw] -right-[8.74vw] lg:right-[-0.28vw] lg:h-[13.89vw] popup" src={wheel} />
+
+          <img className="absolute h-[26.21vw] -right-[9vw] top-[-8vw] lg:right-[-3vw] lg:top-[-4vw] lg:h-[13.55vw] popup" src={wheel} />
           <img className="absolute h-[19.42vw] left-[30.1vw] lg:left-[20.72vw] lg:h-[8.56vw] popup" src={specialdeal} />
           <img className="absolute h-[3.61vw] lg:left-[61.11vw] lg:h-[7.78vw] lg:top-[-1.11vw] hidden lg:block popup" src={lightning} />
 
           {/* FIXED: Brought the missing white spark sticker back to its top-left quadrant position */}
           <img className="absolute h-[16.5vw] top-[27.18vw] left-[4.85vw] lg:top-[18.06vw] lg:left-[10.44vw] lg:h-[7.5vw] popup" src={spark} />
 
-          <img className="absolute h-[25.24vw] top-[170vw] lg:top-[29.44vw] lg:h-[14.17vw] popup" src={check} />
+          <img className="absolute h-[25.24vw] top-[170vw] left-[-3vw] lg:top-[31.68vw] lg:left-[-2vw] lg:h-[12vw] popup" src={check} />
 
-          <img className="absolute h-[21.36vw] top-[176.7vw] -right-[7.77vw] lg:top-[27.5vw] lg:right-[-0.28vw] lg:h-[8.61vw] popup" src={qrcode} />
+          <img className="absolute h-[21.36vw] top-[165vw] -right-[7.77vw] lg:top-[33vw] lg:right-[-1.78vw] lg:h-[8vw] popup" src={qrcode} />
 
           <img className="absolute h-[29.13vw] top-[34.95vw] rotate-6 -right-[8.74vw] lg:top-[9.17vw] lg:right-[-6.67vw] lg:h-[16.67vw] popup" src={triangle} />
 
@@ -1053,44 +1054,46 @@ export default function Home() {
             <ul className="accordion">
               <li>
                 <input type="radio" name="accordion" id="first" />
-                <label htmlFor="first">What is Netflix?</label>
+                <label htmlFor="first">What is Brainwave?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>BrainWave is the flagship hackathon organized by ACTS EDC, bringing together innovative minds to solve real-world challenges through technology, creativity, and collaboration. The event provides participants with an opportunity to learn, build impactful solutions, network with industry experts, and showcase their skills in a competitive environment.</p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="second" />
-                <label htmlFor="second">what is the cost for netflix subscription?</label>
+                <label htmlFor="second">What is the Code of Conduct for BrainWave?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>All participants are expected to maintain a respectful, inclusive, and professional environment throughout the event. Any form of misconduct, discrimination, harassment, plagiarism, or violation of the event guidelines may result in disqualification. Participants are encouraged to read the complete Code of Conduct before the event.
+
+                  *Read the full Code of Conduct here:* <a href="https://www.actsedc.in/" target="_blank" rel="noopener noreferrer">Insert Code of Conduct</a></p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="Third" />
-                <label htmlFor="Third">Where can I watch?</label>
+                <label htmlFor="Third">Who can participate in BrainWave, and can students from different branches form a team?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>BrainWave is open to all eligible students who are passionate about innovation, technology, and problem-solving. Teams must consist of 2–4 members, and interdisciplinary teams with students from different branches or skill sets are highly encouraged, as they bring diverse perspectives and strengthen project development.</p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="forth" />
-                <label htmlFor="forth">How to cancel the subscription?</label>
+                <label htmlFor="forth">What is the team size, and is there any registration fee?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>Each team must consist of 2–4 members. Solo participants and teams with more than four members are not eligible to participate. Registration for BrainWave is completely free, with no participation fee.</p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="fifth" />
-                <label htmlFor="fifth">What can I watch on Netflix?</label>
+                <label htmlFor="fifth">Do I need to join the official community and follow ACTS EDC on social media?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>Yes. Joining the official BrainWave WhatsApp community is mandatory, as all important announcements, schedules, and event updates will be shared there. Participants must also follow the official ACTS EDC social media handles to remain eligible for participation certificates and prizes.</p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="sixth" />
-                <label htmlFor="sixth">is Netflix good for kids?</label>
+                <label htmlFor="sixth">Can we use existing projects, AI tools, or open-source libraries?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>No. All projects and code must be developed during the hackathon. Pre-built projects or copied code are strictly prohibited and will lead to disqualification if plagiarism is detected. However, participants are allowed to use AI tools, open-source libraries, and frameworks, provided they are used ethically and proper credit is given where applicable.</p>
                 </div>
               </li>
             </ul>
