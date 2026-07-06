@@ -11,6 +11,7 @@ import box2 from "./assets/box2.png";
 import box3 from "./assets/box3.png";
 import box4 from "./assets/box4.png";
 
+import prizeCards from "./assets/prize-cards.png";
 import registrationHeading from "./assets/registration-heading.png";
 import posterFrame from "./assets/poster-frame.png";
 import registerBtn from "./assets/register-btn.png";
@@ -18,7 +19,7 @@ import iconPrize from "./assets/icon-prize.png";
 import iconOffline from "./assets/icon-offline.png";
 import iconClock from "./assets/icon-clock.png";
 import iconParticipants from "./assets/icon-participants.png";
-import decorStickers from "./assets/decor-stickers.jpeg";
+import decorStickers from "./assets/decor-stickers.png";
 import card1 from "./assets/card1.png";
 import card2 from "./assets/card2.png";
 import card3 from "./assets/card3.png";
@@ -26,8 +27,6 @@ import card4 from "./assets/card4.png";
 import line from "./assets/line.png";
 import actslogo from "./assets/actslogo.png";
 import keepOut from "./assets/keepout.png";
-
-
 
 import myLogo from './assets/logos/logo2.png'
 import spray from './assets/stickers/spray.png'
@@ -71,7 +70,7 @@ import PersonCard from "./components/PersonCard.jsx";
 import { people } from "./data/data.js";
 import mentorsHeading from "./assets/mentorsHeading.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css/core";
+import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import Tracks from "./components/Tracks.jsx";
 
@@ -90,6 +89,7 @@ function EventRow({ event }) {
   const [lineVisible, setLineVisible] = useState(false);
   const [textVisible, setTextVisible] = useState(false);
   const rowRef = useRef(null);
+  const isLeft = event.side === "left";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -105,8 +105,6 @@ function EventRow({ event }) {
     if (rowRef.current) observer.observe(rowRef.current);
     return () => observer.disconnect();
   }, []);
-
-  const isLeft = event.side === "left";
 
   return (
     <div ref={rowRef} style={{ position: "relative", display: "flex", alignItems: "center", minHeight: "140px" }}>
@@ -172,7 +170,6 @@ function TimelineSection() {
 
       {/* ── BACKGROUND ELEMENTS ── */}
 
-  
 
       {/* Smiley — bottom left, half peeking out */}
       <img src={smileyImg} alt="" style={{
@@ -189,7 +186,7 @@ function TimelineSection() {
       <img src={sprayImg} alt="" style={{
         position: "absolute",
         bottom: "10px",        /* change to move up or down */
-        right: "250px",         /* change to move left or right */
+        right: "100px",         /* change to move left or right */
         width: "130px",        /* change to resize */
         pointerEvents: "none",
         userSelect: "none",
@@ -237,160 +234,98 @@ function TimelineSection() {
 // ===== Prize Pool Section =====
 function PrizeSection() {
   return (
-    <div style={{
-      
-  width: "100%",
-minHeight: "100vh",
+    <section
+      className="w-full flex flex-col items-center justify-center
+                 px-4 py-10 md:py-20 overflow-hidden"
+    >
+      {/* Heading */}
+      <div className="flex items-center justify
+      -center w-full max-w-7xl gap-3 mb-8 md:mb-12">
+        <img
+          src={lineLeft}
+          alt=""
+          className="hidden md:block flex-1 h-3 object-fill"
+        />
 
-display: "flex",
-flexDirection: "column",
-alignItems: "center",
-justifyContent: "center",
-padding: "40px 20px",
-boxSizing: "border-box",
-overflow: "hidden",
-    }}>
+        <img
+          src={prizeHeading}
+          alt="Prize Pool"
+          className="
+            w-[260px]
+            sm:w-[320px]
+            md:w-[420px]
+            lg:w-[520px]
+            h-auto
+            shrink-0
+          "
+        />
 
-      {/* ── HEADING ROW: line + PRIZE POOL + line ── */}
-      <div style={{
-        display: "flex",
-        alignItems: "center",
-        width: "100%",
-        maxWidth: "1200px",
-        padding: "0",
-        gap: "12px",
-        boxSizing: "border-box",
-        marginBottom: "40px",
-      }}>
-        {/* Left line */}
-        <img src={lineLeft} alt="" style={{
-          flex: 1, minWidth: 0, height: "12px", objectFit: "fill",
-        }} />
-
-        {/* Heading */}
-        <img src={prizeHeading} alt="PRIZE POOL" style={{
-          width: "clamp(180px, 28vw, 340px)",
-          flexShrink: 0,
-          height: "auto",
-        }} />
-
-        {/* Right line */}
-        <img src={lineRight} alt="" style={{
-          flex: 1, minWidth: 0, height: "12px", objectFit: "fill",
-        }} />
+        <img
+          src={lineRight}
+          alt=""
+          className="hidden md:block flex-1 h-3 object-fill"
+        />
       </div>
 
-      {/* ── PRIZE CARDS ── */}
-      {/* ───────── PRIZE SECTION ───────── */}
-<div
-  style={{
-    width: "100%",
-    maxWidth: "1200px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: "40px",
-    padding: "0 20px",
-    boxSizing: "border-box",
-  }}
->
-
-  {/* Prize Pool Box */}
-  <img
-    src={box4}
-    alt="Prize Pool"
-    style={{
-      width: "100%",
-      maxWidth: "450px",
-      height: "auto",
-      display: "block",
-    }}
-  />
-
-  {/* Winner Boxes */}
-  <div
-    style={{
-      width: "100%",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "flex-end",
-      gap: "30px",
-      flexWrap: "wrap",
-    }}
-  >
-
-    {/* 2nd Prize */}
-    <img
-      src={box2}
-      alt="Second Prize"
-      style={{
-        width: "100%",
-        maxWidth: "260px",
-        height: "auto",
-      }}
-    />
-
-    {/* 1st Prize */}
-    <img
-      src={box1}
-      alt="First Prize"
-      style={{
-        width: "100%",
-        maxWidth: "320px",
-        height: "auto",
-        marginBottom: "40px",
-      }}
-    />
-
-    {/* 3rd Prize */}
-    <img
-      src={box3}
-      alt="Third Prize"
-      style={{
-        width: "100%",
-        maxWidth: "260px",
-        height: "auto",
-      }}
-    />
-
-  </div>
-
-</div>
-
-    </div>
+      {/* Prize Cards */}
+      <div className="w-full flex justify-center">
+        <img
+          src={prizeCards}
+          alt="Prize Cards"
+          className="
+            w-full
+            max-w-[320px]
+            sm:max-w-[450px]
+            md:max-w-[700px]
+            lg:max-w-[950px]
+            h-auto
+            object-contain
+          "
+        />
+      </div>
+    </section>
   );
 }
 
 // ===== Registration Section =====
 
-
-const REGISTER_LINK = "https://www.ipu.ac.in/";
+  
 
 function RegistrationSection() {
-return (
+  const REGISTER_LINK = "https://www.ipu.ac.in/";
+
+  return (
     <>
       <style>{`
-
-      .reg-page {
-  position: relative;
-  
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  box-sizing: border-box;
-}
+        .reg-page {
+          position: relative;
+          width: 100%;
+          min-height: 100vh;
+          overflow: hidden;
+          box-sizing: border-box;
+        }
 
         /* Heading */
         .reg-heading {
           display: flex;
           justify-content: center;
+          align-items: center;
+          gap: 12px;
           padding-top: 24px;
           position: relative;
           z-index: 10;
         }
-        .reg-heading img {
+
+        .reg-heading-title {
           width: min(700px, 90vw);
           height: auto;
+        }
+
+        .reg-heading-line {
+          flex: 1;
+          min-width: 0;
+          height: 12px;
+          object-fit: fill;
         }
 
         /* Main content row */
@@ -402,9 +337,9 @@ return (
           justify-content: center;
           gap: 24px;
           margin-top: 10px;
-          padding: 0 16px 100px 16px;
+          padding: 0 16px 100px;
           box-sizing: border-box;
-          flex-wrap: wrap;  /* wraps on small screens */
+          flex-wrap: wrap;
         }
 
         /* LEFT side */
@@ -414,27 +349,15 @@ return (
           align-items: center;
           gap: 20px;
         }
+
         .reg-left a img {
           width: min(280px, 80vw);
           height: auto;
-          transition: transform 0.2s;
+          transition: transform .2s;
         }
-        .reg-left a img:hover { transform: scale(1.08); }
 
-        /* Poster frame */
-        .reg-poster {
-          width: min(300px, 80vw);
-          height: min(300px, 80vw);
-          background-size: cover;
-          background-position: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .reg-poster img {
-          width: 75%;
-          height: 75%;
-          object-fit: contain;
+        .reg-left a img:hover {
+          transform: scale(1.08);
         }
 
         /* Divider line */
@@ -443,138 +366,152 @@ return (
           width: auto;
         }
 
-        /* RIGHT side — 2x2 grid of cards */
-        .reg-cards {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 16px;
-        }
-
-        /* Each card */
-        .reg-card {
-          position: relative;
-          width: min(180px, 38vw);
-          height: min(160px, 34vw);
-          background-size: cover;
-          background-position: center;
-        }
-        .reg-card img {
+        /* Background */
+        .reg-bg {
           position: absolute;
-          top: -40px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: min(140px, 28vw);
-          height: auto;
-          z-index:2;
-        }
-
-
-        /* Bottom strip */
-        .reg-bottom {
-          position: absolute;
-          bottom: 0; left: 0;
+          bottom: 0;
+          left: 0;
           width: 100%;
-          z-index: 5;
-        }
-        .reg-bottom img {
-          width: 100%;
-          display: block;
+          object-fit: cover;
+          pointer-events: none;
+          user-select: none;
+          z-index: 0;
         }
 
-        /* Background stickers */
-   .reg-bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-}
+        @media (max-width:480px) {
+          .reg-line {
+            display: none;
+          }
 
-        /* On very small phones — hide the divider line */
-        @media (max-width: 480px) {
-          .reg-line { display: none; }
-          .reg-content { gap: 32px; margin-top: 24px; }
-          .reg-card { width: min(150px, 42vw); height: min(130px, 37vw); }
+          .reg-content {
+            gap: 32px;
+            margin-top: 24px;
+          }
         }
       `}</style>
 
       <div className="reg-page">
-
-        {/* Background stickers */}
-        <img src={decorStickers} alt="" className="reg-bg" />
+        {/* Background */}
+        <img
+          src={decorStickers}
+          alt=""
+          className="reg-bg"
+        />
 
         {/* Heading */}
-      <div className="reg-heading">
+        <div className="reg-heading">
+          <img
+            src={lineLeft}
+            alt=""
+            className="reg-heading-line"
+          />
 
-  <img
-    src={lineLeft}
-    alt=""
-    className="reg-heading-line"
-  />
+          <img
+            src={registrationHeading}
+            alt="Registration"
+            className="reg-heading-title"
+          />
 
-  <img
-    src={registrationHeading}
-    alt="Registration"
-    className="reg-heading-title"
-  />
+          <img
+            src={lineRight}
+            alt=""
+            className="reg-heading-line"
+          />
+        </div>
 
-  <img
-    src={lineRight}
-    alt=""
-    className="reg-heading-line"
-  />
-
-</div>
-
-        {/* Main content */}
+        {/* Main Content */}
         <div className="reg-content">
-
-          {/* LEFT: button + poster */}
+          {/* Left */}
           <div className="reg-left">
-            <a href={REGISTER_LINK} target="_blank" rel="noreferrer">
-              <img src={registerBtn} alt="Register Now" />
-            </a>
-            <div
-              className="reg-poster"
-              style={{ backgroundImage: `url(${posterFrame})` }}
+            <a
+              href={REGISTER_LINK}
+              target="_blank"
+              rel="noreferrer"
             >
-              <img src={actslogo} alt="ACTS Logo" />
+              <img
+                src={registerBtn}
+                alt="Register"
+                className="w-[300px] hover:scale-110 transition"
+              />
+            </a>
+
+            <div
+              className="relative w-[320px] h-[320px] bg-center bg-cover flex items-center justify-center"
+              style={{
+                backgroundImage: `url(${posterFrame})`,
+              }}
+            >
+              <img
+                src={actslogo}
+                alt="Poster"
+                className="w-[240px] h-[240px] object-contain"
+              />
             </div>
           </div>
 
-          {/* Divider line */}
-          <img src={line} alt="" className="reg-line" />
+          {/* Divider */}
+          <img
+            src={line}
+            alt=""
+            className="reg-line"
+          />
 
-          {/* RIGHT: 2x2 cards */}
-          <div className="reg-cards">
-
-            <div className="reg-card" style={{ backgroundImage: `url(${card1})` }}>
-              <img src={iconPrize} alt="Prize Pool" />
+          {/* Cards */}
+          <div className="grid grid-cols-2 gap-4">
+            <div
+              className="relative w-[200px] h-[180px] bg-cover bg-center"
+              style={{ backgroundImage: `url(${card1})` }}
+            >
+              <img
+                src={iconPrize}
+                alt=""
+                className="absolute -top-10 left-1/2 -translate-x-1/2 w-28"
+              />
             </div>
 
-            <div className="reg-card" style={{ backgroundImage: `url(${card2})` }}>
-              <img src={iconOffline} alt="Offline" />
+            <div
+              className="relative w-[200px] h-[180px] bg-cover bg-center"
+              style={{ backgroundImage: `url(${card2})` }}
+            >
+              <img
+                src={iconOffline}
+                alt=""
+                className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
+              />
             </div>
 
-            <div className="reg-card" style={{ backgroundImage: `url(${card3})` }}>
-              <img src={iconClock} alt="24 Hours" />
+            <div
+              className="relative w-[200px] h-[180px] bg-cover bg-center"
+              style={{ backgroundImage: `url(${card3})` }}
+            >
+              <img
+                src={iconClock}
+                alt=""
+                className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
+              />
             </div>
 
-            <div className="reg-card" style={{ backgroundImage: `url(${card4})` }}>
-              <img src={iconParticipants} alt="Participants" />
+            <div
+              className="relative w-[200px] h-[180px] bg-cover bg-center"
+              style={{ backgroundImage: `url(${card4})` }}
+            >
+              <img
+                src={iconParticipants}
+                alt=""
+                className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
+              />
             </div>
-
           </div>
         </div>
 
-        {/* Bottom keep-out strip */}
-        <div className="reg-bottom">
-          <img src={keepOut} alt="Keep Out" />
+        {/* Bottom Strip */}
+        <div className="absolute bottom-0 left-0 w-full">
+          <img
+            src={keepOut}
+            alt="Keep Out"
+            className="w-full object-cover"
+          />
         </div>
-
       </div>
     </>
   );
@@ -639,16 +576,17 @@ export default function Home() {
 
           {/* ================= Decorative Stickers ================= */}
 
-          <img className="absolute h-[26.21vw] -right-[8.74vw] lg:right-[-0.28vw] lg:h-[13.89vw] popup" src={wheel} />
+
+          <img className="absolute h-[26.21vw] -right-[9vw] top-[-8vw] lg:right-[-3vw] lg:top-[-4vw] lg:h-[13.55vw] popup" src={wheel} />
           <img className="absolute h-[19.42vw] left-[30.1vw] lg:left-[20.72vw] lg:h-[8.56vw] popup" src={specialdeal} />
           <img className="absolute h-[3.61vw] lg:left-[61.11vw] lg:h-[7.78vw] lg:top-[-1.11vw] hidden lg:block popup" src={lightning} />
 
           {/* FIXED: Brought the missing white spark sticker back to its top-left quadrant position */}
           <img className="absolute h-[16.5vw] top-[27.18vw] left-[4.85vw] lg:top-[18.06vw] lg:left-[10.44vw] lg:h-[7.5vw] popup" src={spark} />
 
-          <img className="absolute h-[25.24vw] top-[170vw] lg:top-[29.44vw] lg:h-[14.17vw] popup" src={check} />
+          <img className="absolute h-[25.24vw] top-[170vw] left-[-3vw] lg:top-[31.68vw] lg:left-[-2vw] lg:h-[12vw] popup" src={check} />
 
-          <img className="absolute h-[21.36vw] top-[176.7vw] -right-[7.77vw] lg:top-[27.5vw] lg:right-[-0.28vw] lg:h-[8.61vw] popup" src={qrcode} />
+          <img className="absolute h-[21.36vw] top-[165vw] -right-[7.77vw] lg:top-[33vw] lg:right-[-1.78vw] lg:h-[8vw] popup" src={qrcode} />
 
           <img className="absolute h-[29.13vw] top-[34.95vw] rotate-6 -right-[8.74vw] lg:top-[9.17vw] lg:right-[-6.67vw] lg:h-[16.67vw] popup" src={triangle} />
 
@@ -738,7 +676,7 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row gap-[3vw] lg:gap-[1.8vw]">
 
                 <a
-                  href="https://yourwebsite.com"
+                  href="https://unstop.com/o/PxlVshT?utm_medium=Share&utm_source=aditysin8668&utm_campaign=Online_coding_challenge"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-links"
@@ -751,7 +689,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="https://yourwebsite.com"
+                  href="https://chat.whatsapp.com/KO79BBDUoqH7RqcepXjB1J?s=cl&p=a&ilr=2"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-links"
@@ -775,7 +713,7 @@ export default function Home() {
       {/* =============================================================== */}
       {/*                      ABOUT BRAINWAVE                           */}
       {/* =============================================================== */}
-      <section id="about" className="relative w-full mt-20">
+      <section id="about" className="relative w-full pt-20 overflow-x-hidden">
 
         <div
           className="
@@ -801,10 +739,12 @@ export default function Home() {
                 src={aboutBrainwaveHeading}
                 alt="About Brainwave"
                 className="
-                  w-[360px]
-                  sm:w-[360px]
-                  md:w-[520px]
-                  lg:w-[631px]
+                  w-full
+                  max-w-[340px]
+
+                  sm:max-w-[360px]
+                  md:max-w-[520px]
+                  lg:max-w-[631px]
 
                   h-auto
                   shrink-0
@@ -1159,6 +1099,10 @@ export default function Home() {
                 },
 
                 breakpoints: {
+                  1700: {
+                    perPage: 5,
+                    gap: "20px",
+                  },
                   1200: {
                     perPage: 4,
                     gap: "36px",
@@ -1210,69 +1154,69 @@ export default function Home() {
       <section id="faq" className="relative w-full">
         <div className="w-full h-full  relative">
           <div className=''>
-            <img className='hidden lg:block' src={Faq} alt='faq' />
-            <img className='block lg:hidden h-8' src={Faq2} alt='faq' />
+            <img className='hidden lg:block' src={Faq} alt='faq'/> 
+            <img className='block lg:hidden h-[8vw]' src={Faq2} alt='faq'/> 
           </div>
           <div className='main-content'>
             <ul className="accordion">
               <li>
                 <input type="radio" name="accordion" id="first" />
-                <label htmlFor="first">What is Netflix?</label>
+                <label htmlFor="first">What is Brainwave?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>BrainWave is the flagship hackathon organized by ACTS EDC, bringing together innovative minds to solve real-world challenges through technology, creativity, and collaboration. The event provides participants with an opportunity to learn, build impactful solutions, network with industry experts, and showcase their skills in a competitive environment.</p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="second" />
-                <label htmlFor="second">what is the cost for netflix subscription?</label>
+                <label htmlFor="second">What is the Code of Conduct for BrainWave?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>All participants are expected to maintain a respectful, inclusive, and professional environment throughout the event. Any form of misconduct, discrimination, harassment, plagiarism, or violation of the event guidelines may result in disqualification. Participants are encouraged to read the complete Code of Conduct before the event. <a href="https://www.actsedc.in/" target="_blank" rel="noopener noreferrer">*Read the full Code of Conduct here:*</a></p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="Third" />
-                <label htmlFor="Third">Where can I watch?</label>
+                <label htmlFor="Third">Who can participate in BrainWave, and can students from different branches form a team?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>BrainWave is open to all eligible students who are passionate about innovation, technology, and problem-solving. Teams must consist of 2–4 members, and interdisciplinary teams with students from different branches or skill sets are highly encouraged, as they bring diverse perspectives and strengthen project development.</p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="forth" />
-                <label htmlFor="forth">How to cancel the subscription?</label>
+                <label htmlFor="forth">What is the team size, and is there any registration fee?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>Each team must consist of 2–4 members. Solo participants and teams with more than four members are not eligible to participate. Registration for BrainWave is completely free, with no participation fee.</p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="fifth" />
-                <label htmlFor="fifth">What can I watch on Netflix?</label>
+                <label htmlFor="fifth">Do I need to join the official community and follow ACTS EDC on social media?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>Yes. Joining the official BrainWave WhatsApp community is mandatory, as all important announcements, schedules, and event updates will be shared there. Participants must also follow the official ACTS EDC social media handles to remain eligible for participation certificates and prizes.</p>
                 </div>
               </li>
               <li>
                 <input type="radio" name="accordion" id="sixth" />
-                <label htmlFor="sixth">is Netflix good for kids?</label>
+                <label htmlFor="sixth">Can we use existing projects, AI tools, or open-source libraries?</label>
                 <div className="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia exercitationem non necessitatibus, esse officiis reiciendis harum, dignissimos sapiente expedita voluptate quos quisquam minima placeat ex molestias ducimus assumenda illum!</p>
+                  <p>No. All projects and code must be developed during the hackathon. Pre-built projects or copied code are strictly prohibited and will lead to disqualification if plagiarism is detected. However, participants are allowed to use AI tools, open-source libraries, and frameworks, provided they are used ethically and proper credit is given where applicable.</p>
                 </div>
               </li>
             </ul>
           </div>
-          <img className='absolute h-14 top-220 left-1 lg:top-210 lg:left-8 lg:h-27' src={MyLogo} alt='logo' />
-          <img className='absolute h-20 top-215 lg:h-25 lg:top-206 -right-1' src={decor} alt='decor' />
-          <div className="social-links absolute top-220 right-5 lg:top-210 lg:right-15 flex flex-row gap-1 items-center">
-            <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">
-              <img className='w-9 lg:w-12' src={linktree} alt="linktree" />
+          <img className='absolute h-[13vw] top-[205vw] left-[2vw] lg:top-[54.56vw] lg:left-[2.22vw] lg:h-[6.50vw]' src={MyLogo} alt='logo'/>
+          <img className='absolute h-[14vw] top-[205vw] lg:h-[5.10svw] lg:top-[55.38vw] -right-[0.5vw]' src={decor} alt='decor'/>
+          <div className="social-links absolute top-[207.55vw] right-[2vw] lg:top-[56.27svw] lg:right-[1.93vw] lg:w-[14.91vw] lg:h-[3.55vw] flex flex-row justify-evenly gap-1 items-center bg-black rounded-xl">
+            <a href="https://www.actsedc.in/" target="_blank" rel="noopener noreferrer">
+              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={linktree} alt="linktree" />
             </a>
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <img className='w-9 lg:w-12' src={instagram} alt="Instagram" />
+            <a href="https://www.instagram.com/acts_edc/" target="_blank" rel="noopener noreferrer">
+              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={instagram} alt="Instagram" />
             </a>
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <img className='w-9 lg:w-12' src={linkedin} alt="LinkedIn" />
+            <a href="https://www.linkedin.com/company/acts-edc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={linkedin} alt="LinkedIn" />
             </a>
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <img className='w-9 lg:w-12' src={gmail} alt="gmail" />
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=acts.edc@gmail.com" target="_blank" rel="noopener noreferrer">
+              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={gmail} alt="gmail" />
             </a>
           </div>
         </div>

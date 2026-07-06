@@ -247,7 +247,14 @@ input[type="radio"]{
 .splide__track{
     overflow:visible;
 }
+/* Pagination */
 
-.splide__list{
-    padding:20px 0;
+.splide__pagination {
+    position: static !important;
+
+    margin-top: 28px;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
