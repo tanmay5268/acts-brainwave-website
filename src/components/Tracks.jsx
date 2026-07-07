@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import tracksHeading from "../assets/tracks/Group 80.png";
+import tracksHeadingMobile from "../assets/tracks/image 67.png"
 import tracksLine from "../assets/tracks/Group 68.png";
 import track1 from "../assets/tracks/Group 69.png";
 import track2 from "../assets/tracks/Group 70.png";
@@ -40,14 +41,20 @@ export default function Tracks() {
   }, []);
 
   return (
-    <section id="tracks" ref={sectionRef} className="relative w-full min-h-screen overflow-hidden py-10 px-5">
+    <section id="tracks" ref={sectionRef} className="relative w-full overflow-hidden py-10 px-5">
       {/* Heading - matches timeline/registration heading sizing */}
       <div className="text-center mb-12 md:mb-16 relative z-10">
         <img
           loading="lazy"
           src={tracksHeading}
           alt="TRACKS"
-          className="w-[2000px] object-cover mx-auto"
+          className="w-[2000px] object-cover mx-auto hidden lg:block"
+        />
+        <img
+          loading="lazy"
+          src={tracksHeadingMobile}
+          alt="TRACKS"
+          className="object-cover mx-auto block lg:hidden w-[87.25vw]"
         />
       </div>
 

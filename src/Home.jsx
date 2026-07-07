@@ -234,56 +234,131 @@ function TimelineSection() {
 // ===== Prize Pool Section =====
 function PrizeSection() {
   return (
-    <section
-      className="w-full flex flex-col items-center justify-center
-                 px-4 py-10 md:py-20 overflow-hidden"
-    >
-      {/* Heading */}
-      <div className="flex items-center justify
-      -center w-full max-w-7xl gap-3 mb-8 md:mb-12">
-        <img
-          src={lineLeft}
-          alt=""
-          className="hidden md:block flex-1 h-3 object-fill"
-        />
+    <section className="w-full overflow-hidden">
+
+  {/* ================= Heading ================= */}
+  <div className="max-w-7xl mx-auto flex items-center gap-4 lg:gap-8 mb-12 mt-0">
+
+    <img
+      src={lineLeft}
+      alt=""
+      className="hidden md:block flex-1 h-2 object-fill"
+    />
+
+    <img
+      src={prizeHeading}
+      alt="Prize Pool"
+      className="
+        w-[360px]
+        sm:w-[320px]
+        md:w-[420px]
+        lg:w-[520px]
+        xl:w-[600px]
+        h-auto
+        shrink-0
+        mx-auto
+      "
+    />
+
+    <img
+      src={lineRight}
+      alt=""
+      className="hidden md:block flex-1 h-2 object-fill"
+    />
+
+  </div>
+
+  {/* ================= Prize Cards ================= */}
+
+  <div className="max-w-6xl mx-auto">
+
+    {/* Mobile */}
+    <div className="flex md:hidden flex-col items-center gap-6">
+
+      <img
+        src={box4}
+        alt="Prize Pool"
+        className="w-full max-w-[320px] h-auto"
+      />
+
+      <img
+        src={box2}
+        alt="1st Runner Up"
+        className="w-full max-w-[340px] h-auto ml-[4vw]"
+      />
+
+      <img
+        src={box1}
+        alt="Winner"
+        className="w-full max-w-[320px] h-auto"
+      />
+
+      <img
+        src={box3}
+        alt="2nd Runner Up"
+        className="w-full max-w-[345px] h-auto ml-[4vw]"
+      />
+
+    </div>
+
+    {/* Desktop */}
+    <div className="hidden md:flex flex-col items-center">
+
+      {/* Top Prize */}
+      <img
+        src={box4}
+        alt="Prize Pool"
+        className="
+          w-[260px]
+          lg:w-[320px]
+          xl:w-[360px]
+          h-auto
+        "
+      />
+
+      {/* Bottom Three */}
+      <div className="mt-10 ml-10 flex justify-center items-end gap-6 lg:gap-8 xl:gap-10">
 
         <img
-          src={prizeHeading}
-          alt="Prize Pool"
+          src={box1}
+          alt="1st Runner Up"
           className="
-            w-[260px]
-            sm:w-[320px]
-            md:w-[420px]
-            lg:w-[520px]
+            w-[220px]
+            lg:w-[270px]
+            xl:w-[320px]
             h-auto
-            shrink-0
           "
         />
 
         <img
-          src={lineRight}
-          alt=""
-          className="hidden md:block flex-1 h-3 object-fill"
-        />
-      </div>
-
-      {/* Prize Cards */}
-      <div className="w-full flex justify-center">
-        <img
-          src={prizeCards}
-          alt="Prize Cards"
+          src={box2}
+          alt="Winner"
           className="
-            w-full
-            max-w-[320px]
-            sm:max-w-[450px]
-            md:max-w-[700px]
-            lg:max-w-[950px]
+            w-[220px]
+            lg:w-[290px]
+            xl:w-[340px]
             h-auto
-            object-contain
           "
         />
+
+        <img
+          src={box3}
+          alt="2nd Runner Up"
+          className="
+            w-[220px]
+            lg:w-[270px]
+            xl:w-[340px]
+            h-auto
+          "
+        />
+
       </div>
-    </section>
+
+    </div>
+
+  </div>
+
+</section>
   );
 }
 
@@ -584,7 +659,7 @@ export default function Home() {
           {/* FIXED: Brought the missing white spark sticker back to its top-left quadrant position */}
           <img className="absolute h-[16.5vw] top-[27.18vw] left-[4.85vw] lg:top-[18.06vw] lg:left-[10.44vw] lg:h-[7.5vw] popup" src={spark} />
 
-          <img className="absolute h-[25.24vw] top-[170vw] left-[-3vw] lg:top-[31.68vw] lg:left-[-2vw] lg:h-[12vw] popup" src={check} />
+          <img className="absolute h-[25.24vw] top-[170vw] left-[-3vw] lg:top-[31.68vw] lg:left-[-4vw] lg:h-[12vw] popup" src={check} />
 
           <img className="absolute h-[21.36vw] top-[165vw] -right-[7.77vw] lg:top-[30vw] lg:right-[-1.78vw] lg:h-[8vw] popup" src={qrcode} />
 
@@ -873,7 +948,7 @@ export default function Home() {
 
 
       {/* PRIZE POOL SECTION */}
-      {/* <PrizeSection /> */}
+      <PrizeSection />
 
       {/* REGISTRATION SECTION */}
       <RegistrationSection />
@@ -1166,7 +1241,7 @@ export default function Home() {
                 <input type="radio" name="accordion" id="second" />
                 <label htmlFor="second">What is the Code of Conduct for BrainWave?</label>
                 <div className="content">
-                  <p>All participants are expected to maintain a respectful, inclusive, and professional environment throughout the event. Any form of misconduct, discrimination, harassment, plagiarism, or violation of the event guidelines may result in disqualification. Participants are encouraged to read the complete Code of Conduct before the event. <a href="https://docs.google.com/document/d/1OP3FN9Tqv-fwOR1cGzRP5MLUuoGF-EXNmiMAm4ZF3uY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">*Read the full Code of Conduct here:*</a></p>
+                  <p>All participants are expected to maintain a respectful, inclusive, and professional environment throughout the event. Any form of misconduct, discrimination, harassment, plagiarism, or violation of the event guidelines may result in disqualification. Participants are encouraged to read the complete Code of Conduct before the event. <a href="https://docs.google.com/document/d/1OP3FN9Tqv-fwOR1cGzRP5MLUuoGF-EXNmiMAm4ZF3uY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-blue-500">*Read the full Code of Conduct here*</a></p>
                 </div>
               </li>
               <li className="rounded-2xl overflow-hidden ">
@@ -1185,9 +1260,9 @@ export default function Home() {
               </li>
               <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="fifth" />
-                <label htmlFor="fifth">Do I need to join the official community and follow ACTS EDC on social media?</label>
+                <label htmlFor="fifth">Does brainwave 2026 have any offical community channel ?</label>
                 <div className="content">
-                  <p>Yes. Joining the official BrainWave WhatsApp community is mandatory, as all important announcements, schedules, and event updates will be shared there.</p>
+                  <p>Yes, Join the official <a href="https://chat.whatsapp.com/KO79BBDUoqH7RqcepXjB1J?s=cl&p=a&ilr=2" target="_blank" rel="noopener noreferrer" className="text-green-500">BrainWave WhatsApp community</a> , all important announcements, schedules, and event updates will be shared there.</p>
                 </div>
               </li>
               <li className="rounded-2xl overflow-hidden ">

@@ -25,7 +25,7 @@ export const sponsors = [
     id: 1,
     name: "Jing Dong",
     role: "Mentor",
-    description: "Software engineer | Instagran (Meta)",
+    description: "Software Engineer | Instagran (Meta)",
     image: JingDongPFP,
     linkedin: "https://www.linkedin.com/in/jing-dong-909400184/",
   },
