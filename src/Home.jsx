@@ -292,7 +292,7 @@ function PrizeSection() {
   
 
 function RegistrationSection() {
-  const REGISTER_LINK = "https://www.ipu.ac.in/";
+  const REGISTER_LINK = "https://unstop.com/hackathons/brainwave-2026-guru-gobind-singh-indraprastha-university-ggsipu-delhi-1711474";
 
   return (
     <>
