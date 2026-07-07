@@ -186,7 +186,7 @@ function TimelineSection() {
       <img src={sprayImg} alt="" style={{
         position: "absolute",
         bottom: "10px",        /* change to move up or down */
-        right: "100px",         /* change to move left or right */
+        right: "-35px",         /* change to move left or right */
         width: "130px",        /* change to resize */
         pointerEvents: "none",
         userSelect: "none",
@@ -390,7 +390,7 @@ function RegistrationSection() {
         }
       `}</style>
 
-      <div className="reg-page mt-20">
+      <div className="reg-page">
         {/* Background */}
         <img
           src={decorStickers}
@@ -578,7 +578,7 @@ export default function Home() {
 
 
           <img className="absolute h-[26.21vw] -right-[9vw] top-[-8vw] lg:right-[-3vw] lg:top-[-4vw] lg:h-[13.55vw] popup" src={wheel} />
-          <img className="absolute h-[19.42vw] left-[30.1vw] lg:left-[20.72vw] lg:h-[8.56vw] popup" src={specialdeal} />
+          <img className="absolute h-[19.42vw] left-[25.1vw] lg:left-[20.72vw] lg:h-[8.56vw] popup" src={specialdeal} />
           <img className="absolute h-[3.61vw] lg:left-[61.11vw] lg:h-[7.78vw] lg:top-[-1.11vw] hidden lg:block popup" src={lightning} />
 
           {/* FIXED: Brought the missing white spark sticker back to its top-left quadrant position */}
@@ -590,20 +590,20 @@ export default function Home() {
 
           <img className="absolute h-[29.13vw] top-[34.95vw] rotate-6 -right-[8.74vw] lg:top-[9.17vw] lg:right-[-6.67vw] lg:h-[16.67vw] popup" src={triangle} />
 
-          <img className="absolute h-[38.83vw] top-[55.34vw] -left-[3.88vw] lg:top-[16.67vw] lg:h-[15.83vw] lg:left-[-2.22vw] popup" src={coin} />
+          <img className="absolute h-[38.83vw] top-[75.34vw] -left-[3.88vw] lg:top-[16.67vw] lg:h-[15.83vw] lg:left-[-2.22vw] popup" src={coin} />
 
           <img className="absolute -rotate-10 top-[199.03vw] -right-[7.77vw] h-[28.16vw] lg:h-[16.67vw] lg:right-[-5.56vw] lg:top-[34.72vw] popup" src={smile} />
 
           {/* FIXED: Repositioned Crown to match Figma (Higher up, further right, proper scaling) */}
           <img className="absolute top-[19.42vw] left-[77.67vw] h-[21.36vw] lg:top-[13vw] lg:left-[78%] lg:h-[11vw] popup" src={crown} />
 
-          <img className="absolute -rotate-11 top-[166.02vw] right-[1.94vw] w-[10.68vw] lg:top-[22.78vw] lg:right-[5.28vw] lg:w-[5.56vw] popup" src={pose} />
+          <img className="absolute -rotate-11 top-[154vw] right-[1.94vw] w-[10.68vw] lg:top-[22.78vw] lg:right-[5.28vw] lg:w-[5.56vw] popup" src={pose} />
 
           <img className="absolute h-[34.95vw] top-[-5.83vw] -left-[26.21vw] lg:left-[-8.33vw] lg:top-[-1.94vw] lg:h-[18.06vw]" src={keepout} />
 
           <img className="absolute top-[185.15vw] -left-[5.83vw] h-[39.81vw] lg:h-[20vw] lg:-left-[0.56vw] lg:top-[34.17vw] popup" src={spray} />
 
-          <img className="absolute right-[0.97vw] -top-[11.65vw] h-[33.01vw] lg:right-[5.28vw] lg:-top-[8.61vw] lg:h-[20.83vw] popup" src={punk} />
+          <img className="absolute right-[9.5vw] -top-[11.65vw] h-[33.01vw] lg:right-[5.28vw] lg:-top-[8.61vw] lg:h-[20.83vw] popup" src={punk} />
 
           {/* Mobile caution */}
           <img
@@ -627,14 +627,14 @@ export default function Home() {
 
           {/* ================= CENTER CONTENT ================= */}
 
-          <div className="absolute inset-0 flex justify-center pt-[75.42vw] lg:pt-[7.5vw]">
+          <div className="absolute inset-0 flex justify-center pt-[50.42vw] lg:pt-[7.5vw]">
 
             <div className="flex flex-col items-center gap-[3.5vw] lg:gap-[0.2vw]">
 
               {/* Logo */}
               <img
                 src={myLogo}
-                className="block lg:hidden w-[58.25vw] fade-in"
+                className="block lg:hidden w-[87.25vw] fade-in mb-[10vw]"
                 alt=""
               />
               <img
@@ -643,18 +643,11 @@ export default function Home() {
                 alt=""
               />
 
-              {/* Date */}
-              {/* <img
-                src={date}
-                className="w-[35.19vw] lg:w-[17.36vw]"
-                alt=""
-              /> */}
-
               {/* Timer */}
               <div className="relative">
                 <img
                   src={timerbg}
-                  className="w-[67.96vw] lg:w-[40vw]"
+                  className="w-[87.96vw] lg:w-[40vw]"
                   alt=""
                 />
                 <div
@@ -664,8 +657,8 @@ export default function Home() {
           text-black
           font-mono
           font-bold
-          pt-3
-          text-[6.31vw]
+          pt-1.5
+          text-[7.8vw]
           lg:text-[4vw]
         "
                 >
@@ -674,7 +667,7 @@ export default function Home() {
               </div>
 
               {/* Buttons */}
-              <div className="flex flex-col lg:flex-row gap-[3vw] lg:gap-[1.8vw]">
+              <div className="flex flex-col lg:flex-row gap-[0.5vw] lg:gap-[1.8vw] mt-[5vw] lg:mt-[0px]">
 
                 <a
                   href="https://unstop.com/o/PxlVshT?utm_medium=Share&utm_source=aditysin8668&utm_campaign=Online_coding_challenge"
@@ -684,7 +677,7 @@ export default function Home() {
                 >
                   <img
                     src={register}
-                    className="h-[11.65vw] lg:h-[5.56vw] popup"
+                    className="h-[20.65vw] lg:h-[5.56vw] popup"
                     alt=""
                   />
                 </a>
@@ -697,7 +690,7 @@ export default function Home() {
                 >
                   <img
                     src={join}
-                    className="h-[11.65vw] lg:h-[5.56vw] popup"
+                    className="h-[21.65vw] lg:h-[5.56vw] popup"
                     alt=""
                   />
                 </a>
@@ -1194,7 +1187,7 @@ export default function Home() {
                 <input type="radio" name="accordion" id="fifth" />
                 <label htmlFor="fifth">Do I need to join the official community and follow ACTS EDC on social media?</label>
                 <div className="content">
-                  <p>Yes. Joining the official BrainWave WhatsApp community is mandatory, as all important announcements, schedules, and event updates will be shared there. Participants must also follow the official ACTS EDC social media handles to remain eligible for participation certificates and prizes.</p>
+                  <p>Yes. Joining the official BrainWave WhatsApp community is mandatory, as all important announcements, schedules, and event updates will be shared there.</p>
                 </div>
               </li>
               <li className="rounded-2xl overflow-hidden ">
