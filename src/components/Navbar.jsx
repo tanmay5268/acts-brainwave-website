@@ -32,7 +32,7 @@ const NAV_ITEMS = [
   { label: "Timeline", href: "#timeline", id: "timeline" },
   // { label: "Prizes", href: "#prizes", id: "prizes" },
   { label: "Register", href: "#register", id: "register" },
-  { label: "Mentors and Judges", href: "#mentors", id: "sponsors" },
+  { label: "Mentors and Judges", href: "#mentors", id: "mentors" },
   { label: "FAQs", href: "#faq", id: "faq" },
 ];
 
@@ -115,7 +115,7 @@ export default function Navbar() {
 
   return (
     <header 
-      className={`fixed inset-x-0 top-0 z-50 flex justify-center mr-14 ml-5 pt-4  transition-all duration-500 ease-in-out ${
+      className={`fixed inset-x-0 top-0 z-50 flex justify-center mr-4 ml-5 pt-4  transition-all duration-500 ease-in-out ${
         showNavbar 
           ? "opacity-100 translate-y-0 pointer-events-auto" 
           : "opacity-0 -translate-y-4 pointer-events-none"
