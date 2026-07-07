@@ -142,10 +142,10 @@ function EventRow({ event }) {
         transition: "opacity 0.5s ease",
         zIndex: 20,
       }}>
-        <p style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.3rem", letterSpacing: "3px", color: "#ffffff", margin: 0 }}>
+        <p style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(1.2rem, 2.5vw, 3rem)", letterSpacing: "3px", color: "#ffffff", }}>
           {event.name}
         </p>
-        <p style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.75rem", color: "#c8ff00", letterSpacing: "2px", margin: "2px 0 0" }}>
+        <p style={{ fontFamily: "'Share Tech Mono', monospace", fontSize:"clamp(0.8rem, 1.2vw, 3rem)", color: "#c8ff00", letterSpacing: "2px", margin: "2px 0 0" }}>
           {event.date}
         </p>
       </div>
@@ -175,8 +175,8 @@ function TimelineSection() {
       <img src={smileyImg} alt="" style={{
         position: "absolute",
         bottom: "60px",        /* change to move up or down */
-        left: "-35px",         /* negative = peek from edge */
-        width: "140px",        /* change to resize */
+        left: "-55px",         /* negative = peek from edge */
+        width: "240px",        /* change to resize */
         pointerEvents: "none",
         userSelect: "none",
         zIndex: 1,
@@ -207,9 +207,9 @@ function TimelineSection() {
         position: "absolute",
         left: "50%",
         transform: "translateX(-50%)",
-        top: "160px",
+        top: "180px",
         bottom: "100px",
-        width: "2px",
+        width: "4px",
         backgroundColor: "rgba(200,255,0,0.3)",
         zIndex: 2,
       }} />
@@ -217,7 +217,7 @@ function TimelineSection() {
       {/* ── EVENT ROWS ── */}
       <div style={{
         position: "relative",
-        maxWidth: "900px",
+        maxWidth: "1200px",
         margin: "0 auto",
         padding: "0 20px",
         zIndex: 3,             /* above background images */
@@ -390,7 +390,7 @@ function RegistrationSection() {
         }
       `}</style>
 
-      <div className="reg-page">
+      <div className="reg-page mt-20">
         {/* Background */}
         <img
           src={decorStickers}
@@ -399,11 +399,11 @@ function RegistrationSection() {
         />
 
         {/* Heading */}
-        <div className="reg-heading">
+        <div className="reg-heading mb-20">
           <img
             src={lineLeft}
             alt=""
-            className="reg-heading-line"
+            className="reg-heading-line "
           />
 
           <img
@@ -465,7 +465,7 @@ function RegistrationSection() {
               <img
                 src={iconPrize}
                 alt=""
-                className="absolute -top-10 left-1/2 -translate-x-1/2 w-28"
+                className="absolute -top-10 left-1/2 -translate-x-1/2 w-48"
               />
             </div>
 
@@ -476,7 +476,7 @@ function RegistrationSection() {
               <img
                 src={iconOffline}
                 alt=""
-                className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
+                className="absolute -top-14 left-1/2 -translate-x-1/2 w-48"
               />
             </div>
 
@@ -487,7 +487,7 @@ function RegistrationSection() {
               <img
                 src={iconClock}
                 alt=""
-                className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
+                className="absolute -top-8 left-1/2 -translate-x-1/2 w-64"
               />
             </div>
 
@@ -586,7 +586,7 @@ export default function Home() {
 
           <img className="absolute h-[25.24vw] top-[170vw] left-[-3vw] lg:top-[31.68vw] lg:left-[-2vw] lg:h-[12vw] popup" src={check} />
 
-          <img className="absolute h-[21.36vw] top-[165vw] -right-[7.77vw] lg:top-[33vw] lg:right-[-1.78vw] lg:h-[8vw] popup" src={qrcode} />
+          <img className="absolute h-[21.36vw] top-[165vw] -right-[7.77vw] lg:top-[30vw] lg:right-[-1.78vw] lg:h-[8vw] popup" src={qrcode} />
 
           <img className="absolute h-[29.13vw] top-[34.95vw] rotate-6 -right-[8.74vw] lg:top-[9.17vw] lg:right-[-6.67vw] lg:h-[16.67vw] popup" src={triangle} />
 
@@ -644,17 +644,17 @@ export default function Home() {
               />
 
               {/* Date */}
-              <img
+              {/* <img
                 src={date}
                 className="w-[35.19vw] lg:w-[17.36vw]"
                 alt=""
-              />
+              /> */}
 
               {/* Timer */}
               <div className="relative">
                 <img
                   src={timerbg}
-                  className="w-[67.96vw] lg:w-[29.44vw]"
+                  className="w-[67.96vw] lg:w-[40vw]"
                   alt=""
                 />
                 <div
@@ -664,8 +664,9 @@ export default function Home() {
           text-black
           font-mono
           font-bold
+          pt-3
           text-[6.31vw]
-          lg:text-[3vw]
+          lg:text-[4vw]
         "
                 >
                   {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
@@ -874,7 +875,9 @@ export default function Home() {
         <TimelineSection />
       </div>
 
+
       <Tracks/>
+
 
       {/* PRIZE POOL SECTION */}
       <PrizeSection />
@@ -885,7 +888,7 @@ export default function Home() {
       {/* =============================================================== */}
       {/*                         SPONSORS                              */}
       {/* =============================================================== */}
-      <section id="sponsors" className="relative w-full py-10 md:py-24 overflow-hidden">
+      <section id="sponsors" className="relative w-full py-10 md:py-24 overflow-hidden hidden">
 
         <div className="w-full px-4 md:px-8 lg:px-12">
 
@@ -1132,7 +1135,7 @@ export default function Home() {
               {people.map((person) => (
                 <SplideSlide key={person.id}>
 
-                  <div className="flex justify-center">
+                  <div className="flex justify-center mb-5">
                     <PersonCard person={person} />
                   </div>
 
@@ -1159,42 +1162,42 @@ export default function Home() {
           </div>
           <div className='main-content'>
             <ul className="accordion">
-              <li>
+              <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="first" />
                 <label htmlFor="first">What is Brainwave?</label>
                 <div className="content">
                   <p>BrainWave is the flagship hackathon organized by ACTS EDC, bringing together innovative minds to solve real-world challenges through technology, creativity, and collaboration. The event provides participants with an opportunity to learn, build impactful solutions, network with industry experts, and showcase their skills in a competitive environment.</p>
                 </div>
               </li>
-              <li>
+              <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="second" />
                 <label htmlFor="second">What is the Code of Conduct for BrainWave?</label>
                 <div className="content">
                   <p>All participants are expected to maintain a respectful, inclusive, and professional environment throughout the event. Any form of misconduct, discrimination, harassment, plagiarism, or violation of the event guidelines may result in disqualification. Participants are encouraged to read the complete Code of Conduct before the event. <a href="https://www.actsedc.in/" target="_blank" rel="noopener noreferrer">*Read the full Code of Conduct here:*</a></p>
                 </div>
               </li>
-              <li>
+              <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="Third" />
                 <label htmlFor="Third">Who can participate in BrainWave, and can students from different branches form a team?</label>
                 <div className="content">
                   <p>BrainWave is open to all eligible students who are passionate about innovation, technology, and problem-solving. Teams must consist of 2–4 members, and interdisciplinary teams with students from different branches or skill sets are highly encouraged, as they bring diverse perspectives and strengthen project development.</p>
                 </div>
               </li>
-              <li>
+              <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="forth" />
                 <label htmlFor="forth">What is the team size, and is there any registration fee?</label>
                 <div className="content">
                   <p>Each team must consist of 2–4 members. Solo participants and teams with more than four members are not eligible to participate. Registration for BrainWave is completely free, with no participation fee.</p>
                 </div>
               </li>
-              <li>
+              <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="fifth" />
                 <label htmlFor="fifth">Do I need to join the official community and follow ACTS EDC on social media?</label>
                 <div className="content">
                   <p>Yes. Joining the official BrainWave WhatsApp community is mandatory, as all important announcements, schedules, and event updates will be shared there. Participants must also follow the official ACTS EDC social media handles to remain eligible for participation certificates and prizes.</p>
                 </div>
               </li>
-              <li>
+              <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="sixth" />
                 <label htmlFor="sixth">Can we use existing projects, AI tools, or open-source libraries?</label>
                 <div className="content">

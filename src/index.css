@@ -25,6 +25,8 @@ body {
     list-style: none;
     width: 100%;
     padding: 5px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 .accordion li label{
     display: flex;
@@ -36,6 +38,7 @@ body {
     margin-bottom: 2px;
     cursor: pointer;
     position: relative;
+    border-radius: inherit;
 }
 
 @media (max-width: 430px){

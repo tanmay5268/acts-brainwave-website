@@ -47,7 +47,7 @@ export default function Tracks() {
           loading="lazy"
           src={tracksHeading}
           alt="TRACKS"
-          className="w-[2000px] object-cover ml-7 mx-auto"
+          className="w-[2000px] object-cover mx-auto"
         />
       </div>
 
@@ -78,7 +78,7 @@ export default function Tracks() {
         <img
           src={tracksLine}
           alt=""
-          className="w-[min(1000px,80vw)] "
+          className="w-[min(4000px,100vw)] "
         />
       </div>
     </section>
