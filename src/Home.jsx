@@ -1,12 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import timelineHeading from "./assets/timeline-heading.png";
-import elementImg from "./assets/element.png";
 import smileyImg from "./assets/smiley.png";
 import sprayImg from "./assets/spray.png";
 import prizeHeading from "./assets/prize-heading.png";
 import lineLeft from "./assets/line-left.png";
 import lineRight from "./assets/line-right.png";
+import box1 from "./assets/box1.png";
+import box2 from "./assets/box2.png";
+import box3 from "./assets/box3.png";
+import box4 from "./assets/box4.png";
+
 import prizeCards from "./assets/prize-cards.png";
 import registrationHeading from "./assets/registration-heading.png";
 import posterFrame from "./assets/poster-frame.png";
@@ -72,12 +76,12 @@ import Tracks from "./components/Tracks.jsx";
 
 
 const events = [
-  { side: "left", name: "Registrations Open", date: "28 / 06 / 2026", info: "Sign up on the official portal" },
-  { side: "right", name: "Team Formation", date: "10 / 07 / 2026", info: "Build your squad of 2–4 members" },
-  { side: "left", name: "Problem Statements", date: "20 / 07 / 2026", info: "Problem sets released to all teams" },
-  { side: "right", name: "Round 1 — Prelims", date: "01 / 08 / 2026", info: "Online qualifying round" },
-  { side: "left", name: "Round 2 — Semis", date: "10 / 08 / 2026", info: "Top 50 teams advance" },
-  { side: "right", name: "Grand Finale", date: "16 / 08 / 2026", info: "Live event · ₹20 Lakh prize pool" },
+  { side: "left", name: "Registrations Open", date: "28 / 06 / 2026" },
+  { side: "right", name: "Team Formation", date: "10 / 07 / 2026" },
+  { side: "left", name: "Problem Statements", date: "20 / 07 / 2026" },
+  { side: "right", name: "Round 1 — Prelims", date: "01 / 08 / 2026"},
+  { side: "left", name: "Round 2 — Semis", date: "10 / 08 / 2026" },
+  { side: "right", name: "Grand Finale", date: "16 / 08 / 2026" },
 ];
 
 // ===== Single event row =====
@@ -144,9 +148,6 @@ function EventRow({ event }) {
         <p style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.75rem", color: "#c8ff00", letterSpacing: "2px", margin: "2px 0 0" }}>
           {event.date}
         </p>
-        <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.4)", margin: "3px 0 0" }}>
-          {event.info}
-        </p>
       </div>
     </div>
   );
@@ -155,178 +156,278 @@ function EventRow({ event }) {
 // ===== Timeline Section =====
 function TimelineSection() {
   return (
-    <section id="timeline" className="relative w-full">
+    <div style={{
+      position: "relative",
+      width: "100%",
+     
+      minHeight: "100vh",
+      overflowX: "hidden",
+      paddingBottom: "120px",
+    }}>
+
+      {/* Google Fonts */}
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap" />
+
+      {/* ── BACKGROUND ELEMENTS ── */}
+
+
+      {/* Smiley — bottom left, half peeking out */}
+      <img src={smileyImg} alt="" style={{
+        position: "absolute",
+        bottom: "60px",        /* change to move up or down */
+        left: "-35px",         /* negative = peek from edge */
+        width: "140px",        /* change to resize */
+        pointerEvents: "none",
+        userSelect: "none",
+        zIndex: 1,
+      }} />
+
+      {/* Spray can — bottom center-right */}
+      <img src={sprayImg} alt="" style={{
+        position: "absolute",
+        bottom: "10px",        /* change to move up or down */
+        right: "100px",         /* change to move left or right */
+        width: "130px",        /* change to resize */
+        pointerEvents: "none",
+        userSelect: "none",
+        zIndex: 1,
+      }} />
+
+      {/* ── HEADING ── */}
+      <div style={{ textAlign: "center", paddingTop: "40px", paddingBottom: "80px", position: "relative", zIndex: 2 }}>
+        <img
+          src={timelineHeading}
+          alt="TIMELINE"
+          style={{ width: "min(1000px, 95vw)", margin: "0 auto", display: "block" }}
+        />
+      </div>
+
+      {/* ── VERTICAL SPINE LINE ── */}
+      <div style={{
+        position: "absolute",
+        left: "50%",
+        transform: "translateX(-50%)",
+        top: "160px",
+        bottom: "100px",
+        width: "2px",
+        backgroundColor: "rgba(200,255,0,0.3)",
+        zIndex: 2,
+      }} />
+
+      {/* ── EVENT ROWS ── */}
       <div style={{
         position: "relative",
-        width: "100%",
-        backgroundColor: "transparent",
-        minHeight: "100vh",
-        overflowX: "hidden",
-        paddingBottom: "120px",
+        maxWidth: "900px",
+        margin: "0 auto",
+        padding: "0 20px",
+        zIndex: 3,             /* above background images */
       }}>
-
-        {/* Google Fonts */}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap" />
-
-        {/* ── BACKGROUND ELEMENTS ── */}
-        <img src={elementImg} alt="" style={{
-          position: "absolute",
-          top: "20%",
-          right: "-30px",
-          width: "280px",
-          opacity: 0.55,
-          pointerEvents: "none",
-          userSelect: "none",
-          zIndex: 1,
-        }} />
-
-        <img src={smileyImg} alt="" style={{
-          position: "absolute",
-          bottom: "60px",
-          left: "-35px",
-          width: "140px",
-          pointerEvents: "none",
-          userSelect: "none",
-          zIndex: 1,
-        }} />
-
-        <img src={sprayImg} alt="" style={{
-          position: "absolute",
-          bottom: "10px",
-          right: "250px",
-          width: "130px",
-          pointerEvents: "none",
-          userSelect: "none",
-          zIndex: 1,
-        }} />
-
-        {/* ── HEADING ── */}
-        <div style={{ textAlign: "center", paddingTop: "60px", paddingBottom: "60px", position: "relative", zIndex: 2 }}>
-          <img
-            src={timelineHeading}
-            alt="TIMELINE"
-            style={{ width: "min(700px, 90vw)", margin: "0 auto", display: "block" }}
-          />
-        </div>
-
-        {/* ── VERTICAL SPINE LINE ── */}
-        <div style={{
-          position: "absolute",
-          left: "50%",
-          transform: "translateX(-50%)",
-          top: "160px",
-          bottom: "100px",
-          width: "2px",
-          backgroundColor: "rgba(200,255,0,0.3)",
-          zIndex: 2,
-        }} />
-
-        {/* ── EVENT ROWS ── */}
-        <div style={{
-          position: "relative",
-          maxWidth: "900px",
-          margin: "0 auto",
-          padding: "0 20px",
-          zIndex: 3,
-        }}>
-          {events.map((event, index) => (
-            <EventRow key={index} event={event} />
-          ))}
-        </div>
+        {events.map((event, index) => (
+          <EventRow key={index} event={event} />
+        ))}
       </div>
-    </section>
+
+    </div>
   );
 }
 
 // ===== Prize Pool Section =====
 function PrizeSection() {
   return (
-    <section id="prizes" className="relative w-full">
-      <div style={{
-        backgroundColor: "transparent",
-        width: "100%",
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "40px 20px",
-        boxSizing: "border-box",
-        overflow: "hidden",
-      }}>
+    <section
+      className="w-full flex flex-col items-center justify-center
+                 px-4 py-10 md:py-20 overflow-hidden"
+    >
+      {/* Heading */}
+      <div className="flex items-center justify
+      -center w-full max-w-7xl gap-3 mb-8 md:mb-12">
+        <img
+          src={lineLeft}
+          alt=""
+          className="hidden md:block flex-1 h-3 object-fill"
+        />
 
-        {/* ── HEADING ROW: line + PRIZE POOL + line ── */}
-        <div style={{
-          display: "flex",
-          alignItems: "center",
-          width: "100%",
-          maxWidth: "1200px",
-          padding: "0",
-          gap: "12px",
-          boxSizing: "border-box",
-          marginBottom: "40px",
-        }}>
-          <img src={lineLeft} alt="" style={{
-            flex: 1, minWidth: 0, height: "12px", objectFit: "fill",
-          }} />
+        <img
+          src={prizeHeading}
+          alt="Prize Pool"
+          className="
+            w-[260px]
+            sm:w-[320px]
+            md:w-[420px]
+            lg:w-[520px]
+            h-auto
+            shrink-0
+          "
+        />
 
-          <img src={prizeHeading} alt="PRIZE POOL" style={{
-            width: "clamp(180px, 28vw, 340px)",
-            flexShrink: 0,
-            height: "auto",
-          }} />
+        <img
+          src={lineRight}
+          alt=""
+          className="hidden md:block flex-1 h-3 object-fill"
+        />
+      </div>
 
-          <img src={lineRight} alt="" style={{
-            flex: 1, minWidth: 0, height: "12px", objectFit: "fill",
-          }} />
-        </div>
-
-        {/* ── PRIZE CARDS ── */}
-        <div style={{
-          width: "100%",
-          maxWidth: "1200px",
-          display: "flex",
-          justifyContent: "center",
-          padding: "0",
-          boxSizing: "border-box",
-        }}>
-          <img src={prizeCards} alt="Prize Cards" style={{
-            width: "100%",
-            maxWidth: "950px",
-            height: "auto",
-            display: "block",
-          }} />
-        </div>
+      {/* Prize Cards */}
+      <div className="w-full flex justify-center">
+        <img
+          src={prizeCards}
+          alt="Prize Cards"
+          className="
+            w-full
+            max-w-[320px]
+            sm:max-w-[450px]
+            md:max-w-[700px]
+            lg:max-w-[950px]
+            h-auto
+            object-contain
+          "
+        />
       </div>
     </section>
   );
 }
 
 // ===== Registration Section =====
+
+  
+
 function RegistrationSection() {
   const REGISTER_LINK = "https://www.ipu.ac.in/";
 
   return (
-    <section id="register" className="relative w-full">
-      <div className="relative min-h-screen w-full overflow-hidden">
+    <>
+      <style>{`
+        .reg-page {
+          position: relative;
+          width: 100%;
+          min-height: 100vh;
+          overflow: hidden;
+          box-sizing: border-box;
+        }
+
+        /* Heading */
+        .reg-heading {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+          padding-top: 24px;
+          position: relative;
+          z-index: 10;
+        }
+
+        .reg-heading-title {
+          width: min(700px, 90vw);
+          height: auto;
+        }
+
+        .reg-heading-line {
+          flex: 1;
+          min-width: 0;
+          height: 12px;
+          object-fit: fill;
+        }
+
+        /* Main content row */
+        .reg-content {
+          position: relative;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 24px;
+          margin-top: 10px;
+          padding: 0 16px 100px;
+          box-sizing: border-box;
+          flex-wrap: wrap;
+        }
+
+        /* LEFT side */
+        .reg-left {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .reg-left a img {
+          width: min(280px, 80vw);
+          height: auto;
+          transition: transform .2s;
+        }
+
+        .reg-left a img:hover {
+          transform: scale(1.08);
+        }
+
+        /* Divider line */
+        .reg-line {
+          height: min(400px, 50vw);
+          width: auto;
+        }
+
+        /* Background */
+        .reg-bg {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          object-fit: cover;
+          pointer-events: none;
+          user-select: none;
+          z-index: 0;
+        }
+
+        @media (max-width:480px) {
+          .reg-line {
+            display: none;
+          }
+
+          .reg-content {
+            gap: 32px;
+            margin-top: 24px;
+          }
+        }
+      `}</style>
+
+      <div className="reg-page">
+        {/* Background */}
         <img
           src={decorStickers}
           alt=""
-          className="absolute bottom-0 left-0 w-full object-cover pointer-events-none select-none"
+          className="reg-bg"
         />
 
-        <div className="relative z-10 flex justify-center pt-6">
+        {/* Heading */}
+        <div className="reg-heading">
+          <img
+            src={lineLeft}
+            alt=""
+            className="reg-heading-line"
+          />
+
           <img
             src={registrationHeading}
             alt="Registration"
-            className="w-[700px] max-w-[90%]"
+            className="reg-heading-title"
+          />
+
+          <img
+            src={lineRight}
+            alt=""
+            className="reg-heading-line"
           />
         </div>
 
-        <div className="relative z-10 flex items-center justify-center gap-10 mt-28">
-          {/* LEFT */}
-          <div className="flex flex-col items-center gap-6">
-            <a href={REGISTER_LINK} target="_blank" rel="noreferrer">
+        {/* Main Content */}
+        <div className="reg-content">
+          {/* Left */}
+          <div className="reg-left">
+            <a
+              href={REGISTER_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={registerBtn}
                 alt="Register"
@@ -336,7 +437,9 @@ function RegistrationSection() {
 
             <div
               className="relative w-[320px] h-[320px] bg-center bg-cover flex items-center justify-center"
-              style={{ backgroundImage: `url(${posterFrame})` }}
+              style={{
+                backgroundImage: `url(${posterFrame})`,
+              }}
             >
               <img
                 src={actslogo}
@@ -346,12 +449,14 @@ function RegistrationSection() {
             </div>
           </div>
 
+          {/* Divider */}
           <img
             src={line}
-            alt="line"
-            className="h-[420px] w-auto"
+            alt=""
+            className="reg-line"
           />
 
+          {/* Cards */}
           <div className="grid grid-cols-2 gap-4">
             <div
               className="relative w-[200px] h-[180px] bg-cover bg-center"
@@ -399,7 +504,7 @@ function RegistrationSection() {
           </div>
         </div>
 
-        {/* Bottom Keep Out Strip */}
+        {/* Bottom Strip */}
         <div className="absolute bottom-0 left-0 w-full">
           <img
             src={keepOut}
@@ -408,7 +513,7 @@ function RegistrationSection() {
           />
         </div>
       </div>
-    </section>
+    </>
   );
 }
 
