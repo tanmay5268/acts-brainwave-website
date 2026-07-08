@@ -1223,12 +1223,12 @@ export default function Home() {
       {/*                            FAQ                                */}
       {/* =============================================================== */}
       <section id="faq" className="relative w-full">
-        <div className="w-full h-full  relative">
+        <div className="w-full relative">
           <div className=''>
             <img className='hidden lg:block' src={Faq} alt='faq'/> 
             <img className='block lg:hidden h-[8vw]' src={Faq2} alt='faq'/> 
           </div>
-          <div className='main-content'>
+          <div className='main-content '>
             <ul className="accordion">
               <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="first" />
@@ -1274,9 +1274,18 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <img className='absolute h-[13vw] top-[205vw] left-[2vw] lg:top-[54.56vw] lg:left-[2.22vw] lg:h-[6.50vw]' src={MyLogo} alt='logo'/>
-          <img className='absolute h-[14vw] top-[205vw] lg:h-[5.10svw] lg:top-[55.38vw] -right-[0.5vw]' src={decor} alt='decor'/>
-          <div className="social-links absolute top-[207.55vw] right-[2vw] lg:top-[56.27svw] lg:right-[1.93vw] lg:w-[14.91vw] lg:h-[3.55vw] flex flex-row justify-evenly gap-1 items-center bg-black rounded-xl">
+          
+        </div>
+      </section>
+
+      {/* =============================================================== */}
+      {/*                           FOOTER                              */}
+      {/* =============================================================== */}
+      <footer id="footer" className="relative w-full">
+        {/* ================= FOOTER START ============== */}
+              <img className='absolute h-[13vw] left-[2vw]  lg:left-[2.22vw] lg:h-[6.50vw]' src={MyLogo} alt='logo'/>
+          <img className='absolute h-[14vw]  lg:h-[5.10svw] -right-[0.5vw]' src={decor} alt='decor'/>
+          <div className="social-links absolute top-[2vw] right-[2vw] lg:right-[1.93vw] lg:w-[14.91vw] lg:h-[3.55vw] flex flex-row justify-evenly gap-1 items-center bg-black rounded-xl">
             <a href="https://linktr.ee/ACTS_EDC" target="_blank" rel="noopener noreferrer">
               <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={linktree} alt="linktree" />
             </a>
@@ -1290,15 +1299,6 @@ export default function Home() {
               <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={gmail} alt="gmail" />
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* =============================================================== */}
-      {/*                           FOOTER                              */}
-      {/* =============================================================== */}
-      <footer id="footer" className="relative w-full">
-        {/* ================= FOOTER START ============== */}
-
 
         {/* ================== FOOTER END =============== */}
       </footer>
