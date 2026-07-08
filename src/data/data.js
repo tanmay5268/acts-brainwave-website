@@ -5,6 +5,7 @@ import BrajeshKumarShrivastavaPFP from "../assets/sponsorsandmentors/BrajeshKuma
 import MariiaSilichPFP from "../assets/sponsorsandmentors/MariiaSilich.jpg"
 import VladislavKuznetsovPFP from "../assets/sponsorsandmentors/VladislavKuznetsov.jpg"
 import ReshmikaDhandapaniPFP from "../assets/sponsorsandmentors/ReshmikaDhandapani.jpg"
+import VishalChandwaniPFP from "../assets/sponsorsandmentors/VishalChandwani.png"
 
 
 export const sponsors = [
@@ -25,7 +26,7 @@ export const sponsors = [
     id: 1,
     name: "Jing Dong",
     role: "Mentor",
-    description: "Software Engineer | Instagran (Meta)",
+    description: "Software Engineer | Instagram (Meta)",
     image: JingDongPFP,
     linkedin: "https://www.linkedin.com/in/jing-dong-909400184/",
   },
@@ -49,7 +50,7 @@ export const sponsors = [
     id: 4,
     name: "Mariia Silich",
     role: "Mentor",
-    description: "AR Experiences Designer | Snap Inc.",
+    description: "AR Exp. Designer | Snap Inc.",
     image: MariiaSilichPFP,
     linkedin: "https://www.linkedin.com/in/mariia-silich/",
   },
@@ -68,6 +69,14 @@ export const sponsors = [
     description: "Product Manager | Motorola Solutions",
     image: ReshmikaDhandapaniPFP,
     linkedin: "https://www.linkedin.com/in/reshmika-dhandapani/",
+  },
+  {
+    id: 7,
+    name: "Vishal Chandwani",
+    role: "Mentor",
+    description: "Senior Software Engr. | Microsoft",
+    image: VishalChandwaniPFP,
+    linkedin: "https://www.linkedin.com/in/vishalchandwani/",
   },
   
 ];

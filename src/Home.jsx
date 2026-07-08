@@ -1234,42 +1234,42 @@ export default function Home() {
                 <input type="radio" name="accordion" id="first" />
                 <label htmlFor="first">What is Brainwave?</label>
                 <div className="content">
-                  <p>BrainWave is the flagship hackathon organized by ACTS EDC, bringing together innovative minds to solve real-world challenges through technology, creativity, and collaboration. The event provides participants with an opportunity to learn, build impactful solutions, network with industry experts, and showcase their skills in a competitive environment.</p>
+                  <p className="p-4">BrainWave is the flagship hackathon organized by ACTS EDC, bringing together innovative minds to solve real-world challenges through technology, creativity, and collaboration. The event provides participants with an opportunity to learn, build impactful solutions, network with industry experts, and showcase their skills in a competitive environment.</p>
                 </div>
               </li>
               <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="second" />
                 <label htmlFor="second">What is the Code of Conduct for BrainWave?</label>
                 <div className="content">
-                  <p>All participants are expected to maintain a respectful, inclusive, and professional environment throughout the event. Any form of misconduct, discrimination, harassment, plagiarism, or violation of the event guidelines may result in disqualification. Participants are encouraged to read the complete Code of Conduct before the event. <a href="https://docs.google.com/document/d/1OP3FN9Tqv-fwOR1cGzRP5MLUuoGF-EXNmiMAm4ZF3uY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-blue-500">*Read the full Code of Conduct here*</a></p>
+                  <p className="p-4">All participants are expected to maintain a respectful, inclusive, and professional environment throughout the event. Any form of misconduct, discrimination, harassment, plagiarism, or violation of the event guidelines may result in disqualification. Participants are encouraged to read the complete Code of Conduct before the event. <a href="https://docs.google.com/document/d/1OP3FN9Tqv-fwOR1cGzRP5MLUuoGF-EXNmiMAm4ZF3uY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-blue-500">*Read the full Code of Conduct here*</a></p>
                 </div>
               </li>
               <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="Third" />
                 <label htmlFor="Third">Who can participate in BrainWave, and can students from different branches form a team?</label>
                 <div className="content">
-                  <p>BrainWave is open to all eligible students who are passionate about innovation, technology, and problem-solving. Teams must consist of 2–4 members, and interdisciplinary teams with students from different branches or skill sets are highly encouraged, as they bring diverse perspectives and strengthen project development.</p>
+                  <p className="p-4">BrainWave is open to all eligible students who are passionate about innovation, technology, and problem-solving. Teams must consist of 2–4 members, and interdisciplinary teams with students from different branches or skill sets are highly encouraged, as they bring diverse perspectives and strengthen project development.</p>
                 </div>
               </li>
               <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="forth" />
                 <label htmlFor="forth">What is the team size, and is there any registration fee?</label>
                 <div className="content">
-                  <p>Each team must consist of 2–4 members. Solo participants and teams with more than four members are not eligible to participate. Registration for BrainWave is completely free, with no participation fee.</p>
+                  <p className="p-4">Each team must consist of 2–4 members. Solo participants and teams with more than four members are not eligible to participate. Registration for BrainWave is completely free, with no participation fee.</p>
                 </div>
               </li>
               <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="fifth" />
                 <label htmlFor="fifth">Does brainwave 2026 have any offical community channel ?</label>
                 <div className="content">
-                  <p>Yes, Join the official <a href="https://chat.whatsapp.com/KO79BBDUoqH7RqcepXjB1J?s=cl&p=a&ilr=2" target="_blank" rel="noopener noreferrer" className="text-green-500">BrainWave WhatsApp community</a> , all important announcements, schedules, and event updates will be shared there.</p>
+                  <p className="p-4">Yes, Join the official <a href="https://chat.whatsapp.com/KO79BBDUoqH7RqcepXjB1J?s=cl&p=a&ilr=2" target="_blank" rel="noopener noreferrer" className="text-green-500">BrainWave WhatsApp community</a> , all important announcements, schedules, and event updates will be shared there.</p>
                 </div>
               </li>
               <li className="rounded-2xl overflow-hidden ">
                 <input type="radio" name="accordion" id="sixth" />
                 <label htmlFor="sixth">Can we use existing projects, AI tools, or open-source libraries?</label>
                 <div className="content">
-                  <p>No. All projects and code must be developed during the hackathon. Pre-built projects or copied code are strictly prohibited and will lead to disqualification if plagiarism is detected. However, participants are allowed to use AI tools, open-source libraries, and frameworks, provided they are used ethically and proper credit is given where applicable.</p>
+                  <p className="p-4">No. All projects and code must be developed during the hackathon. Pre-built projects or copied code are strictly prohibited and will lead to disqualification if plagiarism is detected. However, participants are allowed to use AI tools, open-source libraries, and frameworks, provided they are used ethically and proper credit is given where applicable.</p>
                 </div>
               </li>
             </ul>
