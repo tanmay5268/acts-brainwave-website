@@ -61,6 +61,47 @@ export default function PersonCard({ person }) {
               select-none
             "
           />
+          {/* Country Flag */}
+
+            <div
+              className="
+                absolute
+
+                top-2
+                right-2
+
+                w-7
+                h-7
+
+                md:w-10
+                md:h-10
+
+                rounded-sm
+
+                bg-white
+
+                border-[1px]
+                border-[#4A4A4A]
+
+                shadow-md
+
+                flex
+                items-center
+                justify-center
+
+                overflow-hidden
+              "
+            >
+              <img
+                src={person.flag}
+                alt="Country"
+                className="
+                  w-full
+                  h-full
+                  object-cover
+                "
+              />
+            </div>
         </div>
 
         {/* Role Badge */}
