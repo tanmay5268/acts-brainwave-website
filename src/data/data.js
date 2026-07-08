@@ -7,6 +7,7 @@ import VladislavKuznetsovPFP from "../assets/sponsorsandmentors/VladislavKuznets
 import ReshmikaDhandapaniPFP from "../assets/sponsorsandmentors/ReshmikaDhandapani.jpg"
 import VishalChandwaniPFP from "../assets/sponsorsandmentors/VishalChandwani.png"
 import NileshDhagePFP from "../assets/sponsorsandmentors/NileshDhage.jpg"
+import usFlag from "../assets/sponsorsandmentors/Flag_of_the_United_States.png"
 
 
 export const sponsors = [
@@ -30,6 +31,7 @@ export const sponsors = [
     description: "Software Engineer | Instagram (Meta)",
     image: JingDongPFP,
     linkedin: "https://www.linkedin.com/in/jing-dong-909400184/",
+    flag: usFlag,
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ export const sponsors = [
     description: "Senior Software Engineer | Plaid",
     image: ArpitSabherwalPFP,
     linkedin: "https://www.linkedin.com/in/arpitsabherwal/",
+    flag: usFlag,
   },
   {
     id: 3,
@@ -46,6 +49,7 @@ export const sponsors = [
     description: "Senior Engineer | Nutanix Inc",
     image: BrajeshKumarShrivastavaPFP,
     linkedin: "https://www.linkedin.com/in/brajesh-shrivastava-3770b08/",
+    flag: usFlag,
   },
   {
     id: 4,
@@ -54,6 +58,7 @@ export const sponsors = [
     description: "AR Exp. Designer | Snap Inc.",
     image: MariiaSilichPFP,
     linkedin: "https://www.linkedin.com/in/mariia-silich/",
+    flag: usFlag,
   },
   {
     id: 5,
@@ -62,6 +67,7 @@ export const sponsors = [
     description: "Co-Founder & CTO | BlueCore Studios",
     image: VladislavKuznetsovPFP,
     linkedin: "https://www.linkedin.com/in/vl-kuz/",
+    flag: usFlag,
   },
   {
     id: 6,
@@ -70,6 +76,7 @@ export const sponsors = [
     description: "Product Manager | Motorola Solutions",
     image: ReshmikaDhandapaniPFP,
     linkedin: "https://www.linkedin.com/in/reshmika-dhandapani/",
+    flag: usFlag,
   },
   {
     id: 7,
@@ -78,6 +85,7 @@ export const sponsors = [
     description: "Senior Software Engr. | Microsoft",
     image: VishalChandwaniPFP,
     linkedin: "https://www.linkedin.com/in/vishalchandwani/",
+    flag: usFlag,
   },
   {
     id: 8,
@@ -86,6 +94,7 @@ export const sponsors = [
     description: "Director of Product Management | Fidelity Investments",
     image: NileshDhagePFP,
     linkedin: "https://www.linkedin.com/in/nileshdhage/",
+    flag: usFlag,
   },
   
 ];
