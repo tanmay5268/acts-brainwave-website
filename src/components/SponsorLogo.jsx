@@ -12,7 +12,7 @@ export default function SponsorLogo({ sponsor }) {
         transition-all
         duration-300
 
-        hover:scale-105
+        hover:opacity-80
       "
     >
       <img
@@ -21,14 +21,16 @@ export default function SponsorLogo({ sponsor }) {
         draggable={false}
         loading="lazy"
         className="
+          max-w-full
+
           h-20
           sm:h-24
           md:h-28
           lg:h-32
 
           w-auto
-          object-contain
 
+          object-contain
           select-none
         "
       />

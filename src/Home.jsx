@@ -1250,29 +1250,29 @@ export default function Home() {
               className="
               overflow-hidden
               rounded-3xl
-              md:py-8
 
               relative
               isolate
             "
             >
-              <div className="sponsors-track mt-5">
+              <div className="sponsors-track ">
 
-                {[...inKindSponsors, ...inKindSponsors].map((sponsor, index) => (
+                {[...inKindSponsors, ...inKindSponsors, ...inKindSponsors].map((sponsor, index) => (
 
                   <div
                     key={`${sponsor.id}-${index}`}
-                    className="
-                    flex
-                    items-center
-                    justify-center
+                     className="
+                      flex
+                      items-center
+                      justify-center
 
-                    shrink-0
+                      shrink-0
 
-                    px-4
-                    md:px-6
-                    lg:px-8
-                  "
+                      w-[150px]
+                      sm:w-[180px]
+                      md:w-[220px]
+                      lg:w-[260px]
+                    "
                   >
 
                     <SponsorLogo sponsor={sponsor} />
