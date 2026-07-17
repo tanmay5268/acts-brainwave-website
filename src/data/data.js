@@ -295,15 +295,15 @@ export const people = [
     flag: indflag,
   },
 
-  {
-    id: 14,
-    name: "Tanisha Bansal",
-    role: "Mentor",
-    description: "AI Engineer | SITA",
-    image: tanisha,
-    linkedin: "https://www.linkedin.com/in/tanishabansal110902/",
-    flag: indflag,
-  },
+  // {
+  //   id: 14,
+  //   name: "Tanisha Bansal",
+  //   role: "Mentor",
+  //   description: "AI Engineer | SITA",
+  //   image: tanisha,
+  //   linkedin: "https://www.linkedin.com/in/tanishabansal110902/",
+  //   flag: indflag,
+  // },
 
   {
     id: 15,
