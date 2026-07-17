@@ -7,7 +7,7 @@ import BrajeshKumarShrivastavaPFP from "../assets/sponsorsandmentors/BrajeshKuma
 import MariiaSilichPFP from "../assets/sponsorsandmentors/MariiaSilich.jpg"
 import VladislavKuznetsovPFP from "../assets/sponsorsandmentors/VladislavKuznetsov.jpg"
 import ReshmikaDhandapaniPFP from "../assets/sponsorsandmentors/ReshmikaDhandapani.jpg"
-import VishalChandwaniPFP from "../assets/sponsorsandmentors/VishalChandwani.png"
+//import VishalChandwaniPFP from "../assets/sponsorsandmentors/VishalChandwani.png"
 import NileshDhagePFP from "../assets/sponsorsandmentors/NileshDhage.jpg"
 import MandarChaudhariPFP from "../assets/sponsorsandmentors/MandarChaudhari.jpg"
 import Saj from "../assets/sponsorsandmentors/saj.jpg"
@@ -26,20 +26,152 @@ import usFlag from "../assets/sponsorsandmentors/Flag_of_the_United_States.png"
 import indflag from "../assets/sponsorsandmentors/ind_flag.png"
 
 
-export const sponsors = [
-        { id: 1, name: "Google", logo: googleLogo },
-        { id: 2, name: "Microsoft", logo: googleLogo },
-        { id: 3, name: "AWS", logo: googleLogo },
-        { id: 4, name: "MongoDB", logo: googleLogo },
-        { id: 5, name: "OpenAI", logo: googleLogo },
-        { id: 6, name: "Google", logo: googleLogo },
-        { id: 7, name: "Microsoft", logo: googleLogo },
-        { id: 8, name: "AWS", logo: googleLogo },
-        { id: 9, name: "MongoDB", logo: googleLogo },
-        { id: 10, name: "OpenAI", logo: googleLogo },
-    ];
+// =========================
+// GOLD SPONSORS
+// =========================
 
-    export const people = [
+//import githubLogo from "../assets/sponsors/github-logo.png";
+
+export const goldSponsors = [
+  {
+    id: 1,
+    name: "GitHub",
+    logo: googleLogo,
+    link: "https://github.com",
+  },
+];
+
+// =========================
+// SILVER SPONSORS
+// =========================
+
+//import githubLogo from "../assets/sponsors/github-logo.png";
+
+export const silverSponsors = [
+  {
+    id: 1,
+    name: "Algorand",
+    logo: googleLogo,
+    link: "https://github.com",
+  },
+];
+
+// =========================
+// BRONZE SPONSORS
+// =========================
+
+//import githubLogo from "../assets/sponsors/github-logo.png";
+
+export const bronzeSponsors = [
+  {
+    id: 1,
+    name: "MLH",
+    logo: googleLogo,
+    link: "#",
+  },
+];
+
+// =========================
+// COMMUNITY PARTNERS
+// =========================
+
+//import githubLogo from "../assets/sponsors/github-logo.png";
+
+export const communityPartners = [
+  {
+    id: 1,
+    name: "devsphere",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 2,
+    name: "l.o.g.i.c",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 3,
+    name: "gtbit one",
+    logo: googleLogo,
+    link: "#",
+  },
+];
+
+// =========================
+// MEDIA PARTNERS
+// =========================
+
+//import githubLogo from "../assets/sponsors/github-logo.png";
+
+export const mediaPartners = [
+  {
+    id: 1,
+    name: "eventopia",
+    logo: googleLogo,
+    link: "#",
+  },
+];
+
+// =========================
+// IN-KIND SPONSORS
+// =========================
+
+//import githubLogo from "../assets/sponsors/github-logo.png";
+
+export const inKindSponsors = [
+  {
+    id: 1,
+    name: ".xyz",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 2,
+    name: "fueler",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 3,
+    name: "google",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 3,
+    name: "gemini",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 4,
+    name: "code grafter",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 5,
+    name: "mlh",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 6,
+    name: "neo4j",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 7,
+    name: "unstop",
+    logo: googleLogo,
+    link: "#",
+  },
+];
+
+
+export const people = [
   {
     id: 1,
     name: "Jing Dong",
@@ -112,7 +244,7 @@ export const sponsors = [
     linkedin: "https://www.linkedin.com/in/nileshdhage/",
     flag: usFlag,
   },
-  
+
   {
     id: 9,
     name: "Mandar Chaudhari",
@@ -177,7 +309,7 @@ export const sponsors = [
     id: 15,
     name: "Muskan singh",
     role: "Mentor",
-    description: "React developer | G2i inc.",
+    description: "React Developer | G2i Inc.",
     image: muskan,
     linkedin: "https://www.linkedin.com/in/muskan-singh-94baab226/",
     flag: indflag,
@@ -207,7 +339,7 @@ export const sponsors = [
     id: 18,
     name: "Ekta Arora",
     role: "Mentor",
-    description: "Enterprise software developer | Volvo Eicher Commercial Vehicles Ltd.",
+    description: "Software Developer | VE Commercial Vehicles Ltd.",
     image: ekta,
     linkedin: "https://www.linkedin.com/in/ektaarora01/",
     flag: indflag,

@@ -65,7 +65,6 @@ import smileyAbout from "./assets/smiley-about.png"
 import lineRightAbout from "./assets/line-right-about.png";
 import lineLeftAbout from "./assets/line-left-about.png"
 import sponsorsHeading from "./assets/sponsorsHeading.png"
-import { sponsors } from "./data/data.js"
 import PersonCard from "./components/PersonCard.jsx";
 import { people } from "./data/data.js";
 import mentorsHeading from "./assets/mentorsHeading.png";
@@ -73,6 +72,22 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import Tracks from "./components/Tracks.jsx";
+
+import SponsorLogo from "./components/SponsorLogo.jsx";
+import goldSponsorHeading from "./assets/goldSponsorHeading.png"
+import silverSponsorHeading from "./assets/silverSponsorHeading.png"
+import bronzeSponsorHeading from "./assets/bronzeSponsorHeading.png"
+import communityPartnerHeading from "./assets/communityPartnerHeading.png"
+import mediaPartnerHeading from "./assets/mediaPartnerHeading.png"
+import inKindHeading from "./assets/inKindHeading.png"
+import {
+  goldSponsors,
+  silverSponsors,
+  bronzeSponsors,
+  communityPartners,
+  mediaPartners,
+  inKindSponsors,
+} from "./data/data.js";
 
 
 const events = [
@@ -353,38 +368,38 @@ function TimelineSection() {
       }} />
 
       {/* ── EVENT ROWS ── */}
-      
+
       <div style={{ position: "relative", maxWidth: "1200px", margin: "0 auto", padding: "0 20px", zIndex: 3 }}>
         {events.map((event, index) => (
           <EventRow key={index} event={event} />
         ))}
       </div>
-      
+
       {/* ── GRAND FINALE HIGHLIGHT ── */}
       <GrandFinaleBlock />
 
     </div>
   );
-} 
+}
 
 // ===== Prize Pool Section =====
 function PrizeSection() {
   return (
     <section className="w-full overflow-hidden">
 
-  {/* ================= Heading ================= */}
-  <div className="max-w-7xl mx-auto flex items-center gap-4 lg:gap-8 mb-12 mt-0">
+      {/* ================= Heading ================= */}
+      <div className="max-w-7xl mx-auto flex items-center gap-4 lg:gap-8 mb-12 mt-0">
 
-    <img
-      src={lineLeft}
-      alt=""
-      className="hidden md:block flex-1 h-2 object-fill"
-    />
+        <img
+          src={lineLeft}
+          alt=""
+          className="hidden md:block flex-1 h-2 object-fill"
+        />
 
-    <img
-      src={prizeHeading}
-      alt="Prize Pool"
-      className="
+        <img
+          src={prizeHeading}
+          alt="Prize Pool"
+          className="
         w-[360px]
         sm:w-[320px]
         md:w-[420px]
@@ -394,113 +409,113 @@ function PrizeSection() {
         shrink-0
         mx-auto
       "
-    />
+        />
 
-    <img
-      src={lineRight}
-      alt=""
-      className="hidden md:block flex-1 h-2 object-fill"
-    />
+        <img
+          src={lineRight}
+          alt=""
+          className="hidden md:block flex-1 h-2 object-fill"
+        />
 
-  </div>
+      </div>
 
-  {/* ================= Prize Cards ================= */}
+      {/* ================= Prize Cards ================= */}
 
-  <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto">
 
-    {/* Mobile */}
-    <div className="flex md:hidden flex-col items-center gap-6">
+        {/* Mobile */}
+        <div className="flex md:hidden flex-col items-center gap-6">
 
-      <img
-        src={box4}
-        alt="Prize Pool"
-        className="w-full max-w-[320px] h-auto"
-      />
+          <img
+            src={box4}
+            alt="Prize Pool"
+            className="w-full max-w-[320px] h-auto"
+          />
 
-      <img
-        src={box2}
-        alt="1st Runner Up"
-        className="w-full max-w-[340px] h-auto ml-[4vw]"
-      />
+          <img
+            src={box2}
+            alt="1st Runner Up"
+            className="w-full max-w-[340px] h-auto ml-[4vw]"
+          />
 
-      <img
-        src={box1}
-        alt="Winner"
-        className="w-full max-w-[320px] h-auto"
-      />
+          <img
+            src={box1}
+            alt="Winner"
+            className="w-full max-w-[320px] h-auto"
+          />
 
-      <img
-        src={box3}
-        alt="2nd Runner Up"
-        className="w-full max-w-[345px] h-auto ml-[4vw]"
-      />
+          <img
+            src={box3}
+            alt="2nd Runner Up"
+            className="w-full max-w-[345px] h-auto ml-[4vw]"
+          />
 
-    </div>
+        </div>
 
-    {/* Desktop */}
-    <div className="hidden md:flex flex-col items-center">
+        {/* Desktop */}
+        <div className="hidden md:flex flex-col items-center">
 
-      {/* Top Prize */}
-      <img
-        src={box4}
-        alt="Prize Pool"
-        className="
+          {/* Top Prize */}
+          <img
+            src={box4}
+            alt="Prize Pool"
+            className="
           w-[260px]
           lg:w-[320px]
           xl:w-[360px]
           h-auto
         "
-      />
+          />
 
-      {/* Bottom Three */}
-      <div className="mt-10 ml-10 flex justify-center items-end gap-6 lg:gap-8 xl:gap-10">
+          {/* Bottom Three */}
+          <div className="mt-10 ml-10 flex justify-center items-end gap-6 lg:gap-8 xl:gap-10">
 
-        <img
-          src={box1}
-          alt="1st Runner Up"
-          className="
+            <img
+              src={box1}
+              alt="1st Runner Up"
+              className="
             w-[220px]
             lg:w-[270px]
             xl:w-[320px]
             h-auto
           "
-        />
+            />
 
-        <img
-          src={box2}
-          alt="Winner"
-          className="
+            <img
+              src={box2}
+              alt="Winner"
+              className="
             w-[220px]
             lg:w-[290px]
             xl:w-[340px]
             h-auto
           "
-        />
+            />
 
-        <img
-          src={box3}
-          alt="2nd Runner Up"
-          className="
+            <img
+              src={box3}
+              alt="2nd Runner Up"
+              className="
             w-[220px]
             lg:w-[270px]
             xl:w-[340px]
             h-auto
           "
-        />
+            />
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
-
-  </div>
-
-</section>
+    </section>
   );
 }
 
 // ===== Registration Section =====
 
-  
+
 
 function RegistrationSection() {
   const REGISTER_LINK = "https://unstop.com/hackathons/brainwave-2026-guru-gobind-singh-indraprastha-university-ggsipu-delhi-1711474";
@@ -1080,7 +1095,7 @@ export default function Home() {
       </div>
 
 
-      <Tracks/>
+      <Tracks />
 
 
       {/* PRIZE POOL SECTION */}
@@ -1097,7 +1112,7 @@ export default function Home() {
         <div className="w-full px-4 md:px-8 lg:px-12">
 
           {/* Heading */}
-          <div className="flex items-center justify-center gap-5 mb-10 md:mb-16 w-full">
+          <div className="flex items-center justify-center gap-5 mb-16 md:mb-24 w-full">
 
             <img
               src={lineLeftAbout}
@@ -1145,73 +1160,172 @@ export default function Home() {
 
           </div>
 
-          {/* Carousel */}
+          {/* ================= Premium Sponsors ================= */}
 
-          <div
-            className="
+          <div className="w-full flex flex-col items-center gap-14 mb-20">
+
+            {/* Gold */}
+
+            <div className="flex flex-col items-center gap-6">
+
+              <img
+                src={goldSponsorHeading}
+                alt="Gold Sponsor"
+                className="w-[260px] md:w-[520px] h-auto"
+              />
+
+              <div className="flex justify-center gap-10 flex-wrap">
+                {goldSponsors.map((sponsor) => (
+                  <SponsorLogo
+                    key={sponsor.id}
+                    sponsor={sponsor}
+                  />
+                ))}
+              </div>
+
+            </div>
+
+            {/* Silver */}
+
+            <div className="flex flex-col items-center gap-6">
+
+              <img
+                src={silverSponsorHeading}
+                alt="Silver Sponsor"
+                className="w-[260px] md:w-[520px] h-auto"
+              />
+
+              <div className="flex justify-center gap-10 flex-wrap">
+                {silverSponsors.map((sponsor) => (
+                  <SponsorLogo
+                    key={sponsor.id}
+                    sponsor={sponsor}
+                  />
+                ))}
+              </div>
+
+            </div>
+
+            {/* Bronze */}
+
+            <div className="flex flex-col items-center gap-6 w-full">
+
+              <img
+                src={bronzeSponsorHeading}
+                alt="Bronze Sponsors"
+                className="w-[260px] md:w-[520px] h-auto"
+              />
+
+              <div className="flex flex-wrap justify-center gap-10">
+                {bronzeSponsors.map((sponsor) => (
+                  <SponsorLogo
+                    key={sponsor.id}
+                    sponsor={sponsor}
+                  />
+                ))}
+              </div>
+
+            </div>
+
+            {/* ============== In-Kind Heading ============== */}
+
+            <div className="flex justify-center mb-10 mt-10">
+
+              <img
+                src={inKindHeading}
+                alt="In-Kind Sponsors"
+                className="
+                w-[260px]
+                md:w-[420px]
+                lg:w-[520px]
+                h-auto
+              "
+              />
+
+            </div>
+
+            {/* Carousel */}
+
+            <div
+              className="
               overflow-hidden
               rounded-3xl
-              
-              md:py-8
 
               relative
               isolate
             "
-          >
-            <div className="sponsors-track mt-5">
+            >
+              <div className="sponsors-track ">
 
-              {[...sponsors, ...sponsors].map((sponsor, index) => (
+                {[...inKindSponsors, ...inKindSponsors, ...inKindSponsors].map((sponsor, index) => (
 
-                <div
-                  key={`${sponsor.id}-${index}`}
-                  className="
-                    flex
-                    items-center
-                    justify-center
+                  <div
+                    key={`${sponsor.id}-${index}`}
+                     className="
+                      flex
+                      items-center
+                      justify-center
 
-                    shrink-0
+                      shrink-0
 
-                    w-[80px]
-                    h-[80px]
-
-                    sm:w-[150px]
-                    sm:h-[150px]
-
-                    md:w-[190px]
-                    md:h-[190px]
-
-                    lg:w-[250px]
-                    lg:h-[250px]
-                  "
-                >
-
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    loading="lazy"
-                    draggable={false}
-                    className="
-                      w-[120px]
-                      h-[120px]
-
-                      md:w-[150px]
-                      md:h-[150px]
-
-                      lg:w-[180px]
-                      lg:h-[180px]
-
-                      object-contain
-
-                      select-none
-                      pointer-events-none
+                      w-[150px]
+                      sm:w-[180px]
+                      md:w-[220px]
+                      lg:w-[260px]
                     "
+                  >
+
+                    <SponsorLogo sponsor={sponsor} />
+
+                  </div>
+
+                ))}
+
+              </div>
+            </div>
+
+            {/* Community */}
+
+            <div className="flex flex-col items-center gap-6 w-full mt-10">
+
+              <img
+                src={communityPartnerHeading}
+                alt="Community Partners"
+                className="w-[320px] md:w-[620px] h-auto md:mb-5"
+              />
+
+              <div className="flex flex-wrap justify-center gap-10">
+                {communityPartners.map((sponsor) => (
+                  <SponsorLogo
+                    key={sponsor.id}
+                    sponsor={sponsor}
                   />
-
-                </div>
-
-              ))}
+                ))}
+              </div>
 
             </div>
+
+            {/* Media */}
+
+            <div className="flex flex-col items-center gap-6 w-full mt-10">
+
+              <img
+                src={mediaPartnerHeading}
+                alt="Media Partners"
+                className="w-[280px] md:w-[520px] h-auto md:mb-5"
+              />
+
+              <div className="flex flex-wrap justify-center gap-10">
+                {mediaPartners.map((sponsor) => (
+                  <SponsorLogo
+                    key={sponsor.id}
+                    sponsor={sponsor}
+                  />
+                ))}
+              </div>
+
+            </div>
+
           </div>
 
         </div>
@@ -1221,11 +1335,11 @@ export default function Home() {
       {/* =============================================================== */}
       {/*                    MENTORS / JUDGES                           */}
       {/* =============================================================== */}
-      <section id="mentors" className="relative w-full mt-10">
+      <section id="mentors" className="relative w-full">
 
         {/* =============== MENTORS START =============== */}
 
-        <div className="w-full px-4 md:px-8 lg:px-12 py-10 md:py-24">
+        <div className="w-full px-4 md:px-8 lg:px-12 py-10 ">
 
           {/* Heading */}
 
@@ -1331,7 +1445,7 @@ export default function Home() {
                     gap: "16px",
                     padding: "2.5rem",
                     arrows: false,
-                    pagination: true,
+                    pagination: false,
                   },
                 },
               }}
@@ -1361,8 +1475,8 @@ export default function Home() {
       <section id="faq" className="relative w-full">
         <div className="w-full relative">
           <div className=''>
-            <img className='hidden lg:block' src={Faq} alt='faq'/> 
-            <img className='block lg:hidden h-[8vw]' src={Faq2} alt='faq'/> 
+            <img className='hidden lg:block' src={Faq} alt='faq' />
+            <img className='block lg:hidden h-[8vw]' src={Faq2} alt='faq' />
           </div>
           <div className='main-content '>
             <ul className="accordion">
@@ -1410,7 +1524,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          
+
         </div>
       </section>
 
@@ -1419,22 +1533,22 @@ export default function Home() {
       {/* =============================================================== */}
       <footer id="footer" className="relative w-full">
         {/* ================= FOOTER START ============== */}
-              <img className='absolute h-[13vw] left-[2vw]  lg:left-[2.22vw] lg:h-[6.50vw]' src={MyLogo} alt='logo'/>
-          <img className='absolute h-[14vw]  lg:h-[5.10svw] -right-[0.5vw]' src={decor} alt='decor'/>
-          <div className="social-links absolute top-[2vw] right-[2vw] lg:right-[1.93vw] lg:w-[14.91vw] lg:h-[3.55vw] flex flex-row justify-evenly gap-1 items-center bg-black rounded-xl">
-            <a href="https://linktr.ee/ACTS_EDC" target="_blank" rel="noopener noreferrer">
-              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={linktree} alt="linktree" />
-            </a>
-            <a href="https://www.instagram.com/acts_edc/" target="_blank" rel="noopener noreferrer">
-              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={instagram} alt="Instagram" />
-            </a>
-            <a href="https://www.linkedin.com/company/acts-edc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
-              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={linkedin} alt="LinkedIn" />
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=acts.edc@gmail.com" target="_blank" rel="noopener noreferrer">
-              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={gmail} alt="gmail" />
-            </a>
-          </div>
+        <img className='absolute h-[13vw] left-[2vw]  lg:left-[2.22vw] lg:h-[6.50vw]' src={MyLogo} alt='logo' />
+        <img className='absolute h-[14vw]  lg:h-[5.10svw] -right-[0.5vw]' src={decor} alt='decor' />
+        <div className="social-links absolute top-[2vw] right-[2vw] lg:right-[1.93vw] lg:w-[14.91vw] lg:h-[3.55vw] flex flex-row justify-evenly gap-1 items-center bg-black rounded-xl">
+          <a href="https://linktr.ee/ACTS_EDC" target="_blank" rel="noopener noreferrer">
+            <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={linktree} alt="linktree" />
+          </a>
+          <a href="https://www.instagram.com/acts_edc/" target="_blank" rel="noopener noreferrer">
+            <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={instagram} alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/company/acts-edc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+            <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={linkedin} alt="LinkedIn" />
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=acts.edc@gmail.com" target="_blank" rel="noopener noreferrer">
+            <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={gmail} alt="gmail" />
+          </a>
+        </div>
 
         {/* ================== FOOTER END =============== */}
       </footer>
