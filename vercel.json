@@ -4,6 +4,11 @@
       "source": "/problem_statements",
       "destination": "https://drive.google.com/file/d/1r95KScjwqH9-lqZX-19RQLw6B9k32XD5/view?usp=sharing",
       "permanent": false
+    },
+    {
+      "source": "/problem-statement",
+      "destination": "https://drive.google.com/file/d/1r95KScjwqH9-lqZX-19RQLw6B9k32XD5/view?usp=sharing",
+      "permanent": false
     }
   ]
 }
